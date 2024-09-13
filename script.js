@@ -1,0 +1,206 @@
+
+function showSection(sectionId) 
+        {
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+
+function sendData() 
+{
+    var mqttBroker = document.getElementById("mqttBroker").value;
+    var mqttopic = document.getElementById("mqttopic").value;
+    var baudrate = document.getElementById("baudrate").value;
+    var bit = document.getElementById("bit").value;
+    var parity = document.getElementById("parity").value;
+    var apn = document.getElementById("apn").value;
+    var slaveid = document.getElementById("slaveid").value;
+    var command = document.getElementById("command").value;
+    var startaddr = document.getElementById("startaddr").value;
+    var noreg = document.getElementById("noreg").value;
+    var writedata = document.getElementById("writedata").value;
+
+    // Prepare the JSON data
+    var data = {
+      baudrate: baudrate,
+      bit: bit,
+      parity: parity,
+      apn: apn,
+      slaveid: slaveid,
+      command: command,
+      startaddr: startaddr,
+      noreg: noreg,
+      writedata: writedata
+    };
+
+    // Connect to the MQTT broker
+    const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+    client.on('connect', function () {
+      console.log('Connected to MQTT broker');
+      client.publish('VFDSETT', JSON.stringify(data), function (err) {
+        if (err) {
+          document.getElementById("response").innerHTML = "Error publishing: " + err;
+        } else {
+          document.getElementById("response").innerHTML = "Data published successfully!";
+          client.end();
+        }
+      });
+    });
+
+    // Handle connection errors
+    client.on('error', function (err) {
+      console.log('Connection error:', err);
+      document.getElementById("response").innerHTML = "MQTT connection error: " + err;
+    });
+}
+
+
+function fetchmq() 
+{
+    // Connect to the MQTT broker
+    const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+    // Define the onConnect callback
+    client.on('connect', function () {
+      console.log("Connected to MQTT broker");
+      client.subscribe('VFDTEST', function (err) {
+        if (!err) {
+          console.log("Subscribed to topic: VFDTEST");
+        } else {
+          console.error("Failed to subscribe:", err);
+        }
+      });
+    });
+
+    // Handle incoming messages
+    client.on('message', function (topic, message) {
+      console.log("Message received:", message.toString());
+
+      // Parse the JSON message
+      const data = JSON.parse(message.toString());
+
+      // Update the gauges with the respective data
+    document.getElementById('freq').setAttribute('data-value', data.freq);
+    document.getElementById('amp').setAttribute('data-value', data.cur);
+    document.getElementById('spd').setAttribute('data-value', data.spd);
+    document.getElementById('temp').setAttribute('data-value', data.temp);
+    document.getElementById('vlt').setAttribute('data-value', data.volt);
+    document.getElementById('strvlt').setAttribute('data-value', data.svolt);
+
+      // Update the motor status
+      var status = data.stat;
+      if (status === 1) {
+        updateMotorStatus('on', 'off', ' ');
+      } else if (status === 2) {
+        updateMotorStatus(' ', 'off', ' ');
+      } else if (status === 3) {
+        updateMotorStatus(' ', ' ', 'error');
+      }
+    });
+
+    // Handle connection errors
+    client.on('error', function (err) {
+      console.error("Connection error:", err);
+    });
+
+    // Handle client disconnect
+    client.on('close', function () {
+      console.log("Disconnected from MQTT broker");
+    });
+
+
+
+
+
+}
+  // Call fetchmq to start the MQTT client
+fetchmq();
+
+// Publish functions for Start and Stop buttons
+function publishStart() 
+{
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+client.on('connect', function () {
+console.log('Connected to MQTT broker');
+client.publish('VFDCNTRL', JSON.stringify({ command: 'on' }), function (err) {
+  if (err) {
+    console.log("Error on publishing command");
+  } else {
+    console.log("Publisehd command successfully");
+    client.end();
+  }
+});
+});
+
+}
+
+function publishStop()
+{
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+client.on('connect', function () {
+console.log('Connected to MQTT broker');
+client.publish('VFDCNTRL', JSON.stringify({ command: 'off' }), function (err) {
+  if (err) {
+    console.log("Error on publishing command off");
+  } else {
+    console.log("Publisehd command off successfully");
+    client.end();
+  }
+});
+});
+
+}
+
+
+
+
+
+
+// Attach these publish functions to your buttons
+document.getElementById('startButton').addEventListener('click', publishStart);
+document.getElementById('stopButton').addEventListener('click', publishStop);
+
+
+function toggleButton(activeButtonId) 
+    {
+// Get all buttons
+var buttons = document.querySelectorAll('.button');
+// Iterate over all buttons and set the active class based on the clicked button
+buttons.forEach(button => {
+    if (button.id === activeButtonId) {
+        button.classList.add('active');
+    } else {
+        button.classList.remove('active');
+    }               
+    });
+    }
+
+function setLEDStatus(ledElement, status) 
+    {
+        ledElement.classList.remove('red', 'green', 'blink');
+
+        if (status === 'on') {
+            ledElement.classList.add('red');
+        } else if (status === 'off') {
+            ledElement.classList.add('green');
+        } else if (status === 'error') {
+            ledElement.classList.add('red', 'blink');
+        }
+    }
+
+function updateMotorStatus(status1, status2, status3) 
+{
+        const led1 = document.getElementById('led1');
+        const led2 = document.getElementById('led2');
+        const led3 = document.getElementById('led3');
+
+        setLEDStatus(led1, status1);
+        setLEDStatus(led2, status2);
+        setLEDStatus(led3, status3);
+}

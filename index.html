@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script> <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>css test</title>
+</head>
+
+    
+    <body>
+    <div id="home" class="section active">
+        <div class="container">
+         
+         
+
+<div class="sidebar">
+            <center><img src="images/TKlogo7.jpg" alt="The" width="40" height="40" style="margin-top:10px;border-radius:50px"></center>
+       
+            <a href="#home" onclick="showSection('home')"><i class="fas fa-home"></i> <span>Home</span></a>
+  
+            <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
+         
+            <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+        </div>
+
+
+	<nav>
+            <br>
+           <center><h1>Solar Based VFD & IOT Gateway </h1></center>
+         </nav>
+
+         <div class="PO" id="1">
+                        
+               <center><img src="images/PR_OvrVw.png" width="45" height="45"></center>
+                <h3 align="center">Project Overview </h3>
+              
+      <p>
+    This project was implimented for <b>M.Chanigaraju </b>for his agricultural farm .As continues power availabilty in farm was challenge ,decided to go with solar power for submercible bore well water pump.
+    The bore well depth was more than 450 feet and to acheive sufficiant flow of water ,CRI 7.5HP water pump was used for carryig out for the pumping need.The specification of motor is 385volt and 15.8 A .In order to acheive sufficiant power ,17 numbers of  monoperc pannel with 49.51 voc and 3.02A (Impp)is used . For to convert DC to 3 phase AC  variable fequancy drive of Crompton Greaves is used . TO monitor VFD remotely VajraVega IOT gateway module is used . The gate way have ESP32 controller with 4G LTE module with remote connectivity and the VFD controller interface is RS485 based modbus controller . The remote monitoring acheived through MQTT protocol with web based dashboard 
+    
+      </p>
+
+        
+         </div>
+                
+
+
+
+
+
+
+         	<div class="Digram" id="2">
+	
+		<center><img src="images/VFD_ARCH2.png" alt="Architecture" width="400" height="450"></center>
+
+		</div>
+
+        <div class="fetures" id="3">
+
+	<center><img src="images/PR_Fet.png" alt="The" width="40" height="40"></center>
+   <center><h3>Key Features</h3></center>
+                    
+ <p> 
+
+<b>ESP32 Microcontroller:</b> A low-power, dual-core microcontroller with built-in Wi-Fi and Bluetooth, ideal for IoT applications.</p>
+<p>
+<b>Modbus Communication:</b> The gateway uses the Modbus protocol to communicate with the VFD, ensuring reliable data exchange.</p>
+<p>
+<b>Real-Time Monitoring:</b> Users can monitor various parameters like water flow rate, pump status, voltage, and current through a web-based or mobile application.
+</p>
+<p>
+<b>Remote Control:</b> The system allows users to start/stop the pump, adjust settings, and control the VFD remotely, optimizing water usage and energy efficiency.
+</p>
+<p>
+<b>Solar Power Integration: </b>The gateway is optimized for solar-powered pumps, making it suitable for off-grid agricultural operations.
+</p>
+<p>
+<b>Cloud Connectivity:</b> Data is transmitted to a cloud platform for logging, analytics, and alerting, providing insights into pump performan
+   </p>  
+	</div>
+
+        <div id="4" class="sysarch">
+
+	<center><img src="images/16077278.png" alt="The" width="50" height="50" class="center"></center>
+    <center><h3> 
+     System Architecture </h3></center>
+    <p>
+
+<b>ESP32 Module:</b> Acts as the brain of the system, handling all communications and data processing tasks.
+</p>
+
+
+    <p>
+        <b>Modbus Interface:</b> Facilitates communication between the ESP32 and the CG VFD, allowing for command and control operations.
+        </p>
+        <p>
+        <b>
+        Solar-Powered Pump: </b>The agricultural water pump, powered by solar energy, is controlled via the VFD to ensure optimal operation under varying solar conditions.
+        </p>
+        <p>
+        <b>
+        Cloud Platform: </b>Receives data from the ESP32 gateway, offering a user-friendly interface for monitoring and control.
+        </p>
+        <p>
+        <b>
+        Variable Frequancy Drive:</b> Converts DC power of solar to regulated 3 phase AC power with frequuncy based drive control. Also has RS485 based MOD BUS RTU for controlling the same through mod bus controller.
+                
+                </p>
+                <center><img src="images/VFD.jpg" class ="center"alt="The" width="250" height="359"></center>
+               
+
+</div>		
+
+
+<footer>
+<p style="margin: 0;">&copy; TK. All Rights Reserved.</p>
+<div style="margin-top: 2px;">
+        <a href="#" style="color: #fff; margin: 0 5px; text-decoration: none;">Home</a>
+        <a href="#" style="color: #fff; margin: 0 5px; text-decoration: none;">About</a>
+        <a href="#" style="color: #fff; margin: 0 5px; text-decoration: none;">Services</a>
+        <a href="#" style="color: #fff; margin: 0 5px; text-decoration: none;">Contact</a>
+        </div>
+        <div style="margin-top: 2px;">      
+    <a href="#" style="color: #fff; margin: 0 5px; font-size: 24px;"><i class="fab fa-facebook-f"></i></a>
+         <a href="#" style="color: #fff; margin: 0 5px; font-size: 24px;"><i class="fab fa-twitter"></i></a>
+         <!-- <a href="#" style="color: #fff; margin: 0 5px; font-size: 24px;"><i class="fab fa-instagram"></i> -->
+        </a>
+        </div>
+
+</footer>
+</div>
+      </div>
+
+<div id="settings" class="section">
+<div class="container1">
+<div class="sidebar">
+            <center><img src="images/TKlogo7.jpg" alt="The" width="40" height="40" style="margin-top:10px;border-radius:50px"></center>
+       
+            <a href="#home" onclick="showSection('home')"><i class="fas fa-home"></i> <span>Home</span></a>
+  
+            <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
+         
+            <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+        </div>
+
+<div class="page">
+<br>
+<br>
+<center><h1>Settings</h1></center>
+<br>
+<br>
+<br>
+<div class="row">
+<div class="side">
+<h2>ESP32 IOT VV401</h2>
+<h5>MQTT Setting</h5>
+<div class="fakeimg">
+<label for="mqttBroker">MQTT BROKER:</label>
+<br>
+<select id="mqttBroker" style="width:150px">
+<option value="broker.emqx.io">broker.emqx.io</option>
+<option value="broker-cn.emqx.io">broker-cn.emqx.io</option>
+<option value="mqtt.eclipseprojects.io">mqtt.eclipseprojects.io</option>
+<option value="test.mosquitto.org">test.mosquitto.org</option>
+<option value="broker.hivemq.com">broker.hivemq.com</option>
+<option value="public.mqtthq.com">public.mqtthq.com</option>
+</select>
+<!--</div>
+<div class="fakeimg"> -->
+<br>
+<br>
+<label for="mqttport">MQTT PORT:</label>
+<br>
+<select id="mqttport" style="width:150px">
+<option value="1883">1883</option>
+<option value="8883">8883</option>
+<option value="8884">8884</option>
+<option value="8083">8083</option>
+<option value="8084">8084</option>
+<option value="80">80</option>
+<option value="443">443</option>
+<option value="8000">8000</option>
+</select>
+<!---</div>
+<div class="fakeimg"> -->
+<br>
+<br>
+<label for="mqttopic">MQTT TOPIC:</label>
+<br>
+<select id="mqttopic" style="width:150px">
+<option value="TEST">TEST</option>
+<option value="Register">Register</option>
+</select>
+</div>
+<h3>RS485 I/F Setting</h3>
+<div class="fakeimg" style="height:60px;">
+<label for="baudrate">Baud Rate:</label>
+<br>
+<select id="baudrate" style="width:150px">
+<option value="4800">4800</option>
+<option value="9600">9600</option>
+<option value="19200">19200</option>
+<option value="38400">38400</option>
+<option value="57600">57600</option>
+<option value="115200">115200</option>
+</select>
+</div>
+<br>
+<div class="fakeimg" style="height:60px;">
+<label for="bit">BIT LENGTH:</label>
+<br>
+<select id="bit" style="width:150px">
+<option value="8">8</option>
+<option value="7">7</option>
+</select>
+</div>
+<br>
+<div class="fakeimg" style="height:60px;">
+<label for="parity">PARITY :</label>
+<br>
+<select id="parity" style="width:150px">
+<option value="ODD">ODD</option>
+<option value="EVEN">EVEN</option>
+<option value="NO">NO</option>
+</select>
+</div>
+<br>
+<div class="fakeimg" style="height:60px;">
+<label for="apn">APN:</label>
+<br>
+<select id="apn" style="width:150px">
+<option value="Bsnlnet">BSNL</option>
+<option value="airtelgprs.com">Airtel</option>
+<option value="portalnmms">Vodaphone</option>
+<option value="rcomnet">Reliance</option>
+</select>
+</div>
+<br>
+</div>
+<div class="main">
+<h2>Read Register Setting</h2>
+<h5>Address of Slave, Command code, Data, CRC</h5>
+<div class="fakeimg" style="height:290px;">
+<label for="slaveid">SLAVE ID:</label>
+<br>
+<select id="slaveid" style="width:150px">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<br>
+<br>
+<label for="command">COMMAND CODE:</label>
+<br>
+<select id="command" style="width:150px">
+<option value="03">Read Code</option>
+<option value="06">Write Code</option>
+<option value="08">Diag and Setting</option>
+</select>
+<br>
+<br>
+<label for="startaddr">START AR:</label>
+<br>
+<select id="startaddr" style="width:150px">
+<option value="2100">Read Addr</option>
+<option value="2000">Write Addr</option>
+</select>
+<br>
+<br>
+<label for="noreg">NUMBER OF REG:</label>
+<br>
+<select id="noreg" style="width:150px">
+<option value="2">2</option>
+<option value="4">4</option>
+</select>
+<br>
+<br>
+<label for="writedata">Data to write:</label>
+<br>
+<select id="writedata" style="width:150px">
+<option value="0001">Run_Forward</option>
+<option value="0005">Slowdown_Stop</option>
+</select>
+</div>
+
+<p></p>
+<!--<br> -->
+<h2>Setting Submit Window</h2>
+<p>2100H--->0000H:PRM SET, 0001H:RUN, 0004H:PARKING, 0006H:FLT</p>
+<div class="fakeimg" style="height:150px;" onclick="sendData()" id="response">
+<!-- Display the parameters here -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="dashboard" class="section">
+    <div class="container2">
+        <div class="sidebar">
+            <center><img src="images/TKlogo7.jpg" alt="The" width="40" height="40" style="margin-top:10px;border-radius:50px"></center>
+       
+            <a href="#home" onclick="showSection('home')"><i class="fas fa-home"></i> <span>Home</span></a>
+  
+            <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
+         
+            <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+        </div>
+       <div class="page1">
+    <h1 align="center">VFD Monitor & Control Dashboard</h1>
+    <div class="dashboard">
+        <div class="buttonpos">Pump Control
+        <div class="button" id="startButton" onclick="toggleButton('startButton')">
+          <div class="bar"></div>
+          pump start
+        </div>
+        
+        <div class="button" id="stopButton" onclick="toggleButton('stopButton')">
+          <div class="bar"></div>
+          pump stop
+        </div>
+        </div>
+        <div class="meter">VFD Output Voltage Meter
+        <canvas 
+        id="vlt"
+        data-type="radial-gauge"
+        data-width="200"
+        data-height="200"
+        data-min-value="0"
+        data-max-value="1000"
+        data-major-ticks="0,200,400,600,800,1000"
+        data-highlights='[{"from": 0, "to": 400, "color": "rgba(127, 223, 162, .75)"},{"from": 400, "to": 800, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 800, "to": 1000, "color": "rgba(255, 50, 50, .75)"}]'
+        data-value="0"
+        data-units="Volt"
+        data-title="Drive Voltage"
+        data-animation-rule="linear"
+        
+        ></canvas>
+         </div> 
+         <div class="meter">VFD Output Frequancy Meter
+            <canvas 
+            id="freq"
+            data-type="radial-gauge"
+        data-width="200"
+        data-height="200"
+        data-min-value="0"
+            data-max-value="100"
+        data-major-ticks="0,20,40,60,80,100"
+        data-highlights='[{"from": 0, "to": 40, "color": "rgba(127, 223, 162, .75)"},{"from": 40, "to": 80, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 80, "to": 100, "color": "rgba(255, 50, 50, .75)"}]'
+        data-value=""
+        data-units="Freq"
+        data-title="Drive Frequancy"
+        
+        ></canvas> 
+        </div>
+        <div class="meter">Solar Panel output Voltage
+            <canvas 
+            id="strvlt"
+            data-type="radial-gauge"
+        data-width="200"
+        data-height="200"
+        data-min-value="0"
+            data-max-value="1000"
+        data-major-ticks="0,200,400,600,800,1000"
+        data-highlights='[{"from": 0, "to": 400, "color": "rgba(127, 223, 162, .75)"},{"from": 400, "to": 800, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 800, "to": 1000, "color": "rgba(255, 50, 50, .75)"}]'
+        data-value="0"
+        data-units="Volt"
+        data-title="String Voltage"
+        
+        ></canvas>
+        </div>
+        <div class="meter">VFD Output Current 
+            <canvas 
+        id="amp"
+        data-type="radial-gauge"
+        data-width="200"
+        data-height="200"
+        data-min-value="0"
+            data-max-value="40"
+        data-major-ticks="0,8,16,24,32,40"
+        data-highlights='[{"from": 0, "to": 16, "color": "rgba(127, 223, 162, .75)"},{"from": 16, "to": 32, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 32, "to": 40, "color": "rgba(255, 50, 50, .75)"}]'
+        data-value="0"
+        data-units="Amp"
+        data-title="Output Ampere"
+        
+        ></canvas>
+        </div>
+        <div class="meter">Water Pump Motor Speed
+            <canvas 
+            id="spd"
+            data-type="radial-gauge"
+        data-width="200"
+        data-height="200"
+        data-min-value="0"
+            data-max-value="3000"
+        data-major-ticks="0,600,1200,1800,2400,3000"
+        data-highlights='[{"from": 0, "to": 1200, "color": "rgba(127, 223, 162, .75)"},{"from": 1200, "to": 2400, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 2400, "to": 3000, "color": "rgba(255, 50, 50, .75)"}]'
+        data-value="0"
+        data-units="Speed"
+        data-title="Motor Speed"
+        
+        ></canvas>
+        </div>
+        <div class="meter">VFD Temaparature 
+        <canvas 
+        id="temp"
+        data-width="70" 
+        data-type="linear-gauge"
+        data-width="10"
+        data-height="185"
+        data-value="0"
+        data-units="Temp"
+        data-highlights='[{"from": 0, "to": 30, "color": "rgba(127, 223, 162, .75)"},{"from": 30, "to": 50, "color": "rgba(255, 245, 174, .75)"},
+                {"from": 50, "to": 100, "color": "rgba(255, 50, 50, .75)"}]'
+        data-title="Drive Temparature"
+        ></canvas>
+        </div>
+          <div class="button1">
+          <br>
+          <br>
+          <br>
+           <div id="led1" class="led"></div>
+            <label>Motor ON..</label>
+           <br>
+            <div id="led2" class="led"></div>
+            <label>VFD ON....</label>
+            <br>
+            <div id="led3" class="led"></div>
+            <label> VFD Error..</label>
+            </div>
+         </div>
+        </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
+    
