@@ -348,17 +348,25 @@
        <div class="page1">
     <h1 align="center">VFD Monitor & Control Dashboard</h1>
     <div class="dashboard">
+
+        <div class="breaker" onclick="toggleBreaker()">VFD Power
+           <center> <img id="breakerImage" src="CB_OFF.png" alt="Circuit Breaker OFF"></center>
+        </div> 
+
         <div class="buttonpos">Pump Control
         <div class="button" id="startButton" onclick="toggleButton('startButton')">
           <div class="bar"></div>
           pump start
         </div>
-        
         <div class="button" id="stopButton" onclick="toggleButton('stopButton')">
           <div class="bar"></div>
           pump stop
         </div>
         </div>
+
+
+
+
         <div class="meter">VFD Output Voltage Meter
         <canvas 
         id="vlt"

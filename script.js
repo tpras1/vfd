@@ -243,3 +243,19 @@ window.onload = function() {
     document.getElementById('app-content').classList.remove('hidden');
   }
 };
+let isOn = false;
+function toggleBreaker() 
+{
+  const breakerImage = document.getElementById('breakerImage');
+  if (isOn) 
+    {
+      breakerImage.src = "CB_OFF.png";
+      breakerImage.alt = "Circuit Breaker OFF";
+  } 
+  else 
+  {
+      breakerImage.src = "CB_ON.png";
+      breakerImage.alt = "Circuit Breaker ON";
+  }
+  isOn = !isOn;
+}

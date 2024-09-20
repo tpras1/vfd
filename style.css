@@ -483,3 +483,21 @@ border-radius: 8px;
               {
                 display: none;
               }
+              .breaker {
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                display: grid;
+                width: 120px;
+                height:250px;
+                background-color: white;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                border-radius: 8px;
+                place-items: center;
+                text-align: center;
+
+            }
+            breakerImage {
+                width: 40px; 
+                margin-bottom: 5px;/* Adjust size as needed */
+            }
