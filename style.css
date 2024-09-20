@@ -154,7 +154,6 @@ grid-template-areas: 'sidebar'
                     'footer'
                      ;
 
-font_sze: 4px;
 }
 }
 
@@ -407,7 +406,7 @@ border-radius: 8px;
                                   'page1'
                                  ;
             
-            font_sze: 4px;
+
             }
             }    
             @media(max-width:600px)
@@ -422,6 +421,65 @@ border-radius: 8px;
                                   'page'
                                  ;
             
-            font_sze: 4px;
             }
             }    
+            .containers
+            {
+                display: grid;
+                height: 100vh;
+                color: white;
+                grid-template-areas:'sidebar containerl';
+                grid-gap: .9rem;
+                /*font-size: 2rem;*/
+                grid-template-columns: 0.1fr 1fr ;
+                grid-template-rows: 1fr;
+                            
+            }
+            .containerl 
+            {
+                grid-area: containerl;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                width: 400px;
+                height: 300px;
+                /*margin: 0 auto;*/
+                
+            }
+
+            @media(max-width:600px)
+            {
+            .containers
+            {
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: .1fr 1fr;
+            grid-template-areas: 'sidebar'
+                                  'containerl '
+                                 
+            }
+        }
+
+            input, button {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+              }
+              button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+              }
+              .hidden 
+              {
+                display: none;
+              }

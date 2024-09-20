@@ -7,8 +7,13 @@ function showSection(sectionId)
             }
             document.getElementById(sectionId).classList.add('active');
         }
-
-
+function removesection()
+{
+  var sections = document.getElementsByClassName('section');
+  for (var i = 0; i < sections.length; i++) {
+      sections[i].classList.remove('active');
+}
+}
 function sendData() 
 {
     var mqttBroker = document.getElementById("mqttBroker").value;
@@ -204,3 +209,37 @@ function updateMotorStatus(status1, status2, status3)
         setLEDStatus(led2, status2);
         setLEDStatus(led3, status3);
 }
+
+function login() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Simple hardcoded login logic
+  if (username === 'admin' && password === 'password123') {
+    // Store login status
+    sessionStorage.setItem('loggedIn', true);
+    // Show app content and hide login
+    document.getElementById('login-screen').classList.add('hidden');
+    document.getElementById('home').classList.add('active');
+    document.getElementById('app-content').classList.remove('hidden');
+
+    
+  } else {
+    alert('Invalid credentials. Please try again.');
+  }
+}
+function logout() {
+  // Clear login status and redirect to login screen
+  sessionStorage.removeItem('loggedIn');
+  document.getElementById('login-screen').classList.remove('hidden');
+  document.getElementById('app-content').classList.add('hidden');
+  removesection();
+}
+
+
+window.onload = function() {
+  if (sessionStorage.getItem('loggedIn'))  {
+    document.getElementById('login-screen').classList.add('hidden');
+    document.getElementById('app-content').classList.remove('hidden');
+  }
+};

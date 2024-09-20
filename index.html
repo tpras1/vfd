@@ -10,14 +10,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>css test</title>
 </head>
+ <body>
+  <!-- Login Screen -->
 
-    
-    <body>
+  
+
+  <div id="login-screen" class="containers">
+
+        <div class="sidebar">
+                  
+          <center><img src="https://tpras1.github.io/vfd/TKlogo7.jpg" alt="Image description" width="40" height="40" style="margin-top:10px;border-radius:50px"></center>
+             <a href="#home" onclick="showSection('home')"><i class="fas fa-home"></i> <span>Home</span></a>
+      
+             <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          
+             <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+             
+             <a onclick=" logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
+         
+         </div>
+
+ <div class="containerl">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+  <div id="app-content" class="hidden">
+
     <div id="home" class="section active">
         <div class="container">
-         
-         
-
+              
 <div class="sidebar">
             
          <center><img src="https://tpras1.github.io/vfd/TKlogo7.jpg" alt="Image description" width="40" height="40" style="margin-top:10px;border-radius:50px"></center>
@@ -26,6 +51,9 @@
             <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
          
             <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+            
+            <a onclick=" logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
+        
         </div>
 
 
@@ -135,6 +163,7 @@
 </footer>
 </div>
       </div>
+    
 
 <div id="settings" class="section">
 <div class="container1">
@@ -146,6 +175,8 @@
             <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
          
             <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+
+            <a onclick=" logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
         </div>
 
 <div class="page">
@@ -311,6 +342,8 @@
             <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> <span>Settings</span></a>
          
             <a href="#dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+
+            <a onclick=" logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
         </div>
        <div class="page1">
     <h1 align="center">VFD Monitor & Control Dashboard</h1>
@@ -443,12 +476,7 @@
         </div>
 </div>
 </div>
-
-
-
-
-
-
+</div>
 
 
 
