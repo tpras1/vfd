@@ -430,11 +430,15 @@ text-align: center;
                 display: grid;
                 height: 100vh;
                 color: white;
+                background-image: url('VFD_ARCH2.png');
                 grid-template-areas:'sidebar containerl';
                 grid-gap: .9rem;
                 /*font-size: 2rem;*/
                 grid-template-columns: 0.1fr 1fr ;
                 grid-template-rows: 1fr;
+                background-repeat: no-repeat;
+                background-size: 80%;
+                background-position: center;
                             
             }
             .containerl 
@@ -445,11 +449,12 @@ text-align: center;
                 margin-top: auto;
                 margin-bottom: auto;
                 padding: 20px;
-                background-color: white;
+                background-color: rgb(125, 185, 185);
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 5px;
                 width: 400px;
                 height: 300px;
+                opacity: 0.88;
                 /*margin: 0 auto;*/
                 
             }

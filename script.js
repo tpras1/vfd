@@ -296,3 +296,48 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'VOFF' }), function (err) {
 });
 
 }
+
+/*let isp = false;
+function togglestrt() 
+{
+  const startImage = document.getElementById('strtimg');
+  const stopImage = document.getElementById('stpimg');
+  if (isp) 
+    {
+      startImage.src = "strt_u.png";
+      startImage.alt = "start OFF";
+      stopImage.src = "stp.png";
+      publishV_OFF();
+  } 
+  else 
+  {
+      startImage.src = "strt.png";
+      startImage.alt = "start ON";
+      stopImage.src = "stp_u.png";
+      publisV_ON();
+  }
+  isp = !isp;
+}
+
+let ispf = false;
+function togglestp() 
+{
+  const stopImage = document.getElementById('stpimg');
+  const startImage = document.getElementById('strtimg');
+  if (ispf) 
+    {
+      stopImage.src = "stp_u.png";
+      stopImage.alt = "stop OFF";
+      startImage.src = "strt.png";
+      publishV_OFF();
+  } 
+  else 
+  {
+      stopImage.src = "stp.png";
+      stopImage.alt = "stop ON";
+      startImage.src = "strt_u.png";
+      
+      publisV_ON();
+  }
+  ispf = !ispf;
+} */
