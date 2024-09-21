@@ -290,9 +290,10 @@ text-align: center;
     border-radius: 50%;
     border: 2px solid #ddd;
     box-shadow: 0 0 5px 0px #888;
-    top: 0px;
+    margin-bottom: auto;
     font-size: 10px;
     color: #333;
+
     /*font-weight: bold;*/
     text-align: center;
     overflow: hidden;
@@ -358,7 +359,8 @@ text-align: center;
             background: white;
             text-align: right;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-border-radius: 8px;
+            border-radius: 8px;
+            
         }
 
         .red {
@@ -478,6 +480,7 @@ border-radius: 8px;
                 color: white;
                 border: none;
                 cursor: pointer;
+                
               }
               .hidden 
               {
@@ -495,5 +498,12 @@ border-radius: 8px;
                 border-radius: 8px;
                 place-items: center;
                 text-align: center;
+
+            }
+            #breakerImage
+            {
+
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                margin-bottom: 8px;
 
             }
