@@ -114,7 +114,7 @@
 
         <div id="4" class="sysarch">
 
-	<center><img src="https://tpras1.github.io/vfd/16077278.png" alt="The" width="50" height="50" class="center"></center>
+	<center><img src="https://tpras1.github.io/vfd/16077278.png" alt="The" width="50" height="50"  class="center"></center>
     <center><h3> 
      System Architecture </h3></center>
     <p>
@@ -350,20 +350,32 @@
     <div class="dashboard">
 
         <div class="breaker" onclick="toggleBreaker()">VFD Power
-           <center> <img id="breakerImage" src="CB_OFF.png" alt="Circuit Breaker OFF"></center>
+           <center> <img id="breakerImage" src="CB_OFF.png" alt="Circuit Breaker OFF" width="60" height="190"></center>
         </div> 
 
         <div class="buttonpos">Pump Control
         <div class="button" id="startButton" onclick="toggleButton('startButton')">
           <div class="bar"></div>
-          pump start
+         Start
         </div>
         <div class="button" id="stopButton" onclick="toggleButton('stopButton')">
           <div class="bar"></div>
-          pump stop
+          Stop
         </div>
         </div>
-
+        <div class="button1">VFD status &nbsp; &nbsp; &nbsp; &nbsp;
+            <br>
+            <br>
+            <br>
+             <div id="led1" class="led"></div>
+              <label>Motor ON &nbsp; &nbsp;</label>
+             <br>
+              <div id="led2" class="led"></div>
+              <label>VFD ON &nbsp; &nbsp; &nbsp;</label>
+              <br>
+              <div id="led3" class="led"></div>
+              <label> VFD ERR &nbsp; &nbsp; </label>
+              </div>
 
 
 
@@ -467,19 +479,7 @@
         data-title="Drive Temparature"
         ></canvas>
         </div>
-          <div class="button1">
-          <br>
-          <br>
-          <br>
-           <div id="led1" class="led"></div>
-            <label>Motor ON..</label>
-           <br>
-            <div id="led2" class="led"></div>
-            <label>VFD ON....</label>
-            <br>
-            <div id="led3" class="led"></div>
-            <label> VFD Error..</label>
-            </div>
+
          </div>
         </div>
 </div>

@@ -251,11 +251,48 @@ function toggleBreaker()
     {
       breakerImage.src = "CB_OFF.png";
       breakerImage.alt = "Circuit Breaker OFF";
+      publishV_OFF();
   } 
   else 
   {
       breakerImage.src = "CB_ON.png";
       breakerImage.alt = "Circuit Breaker ON";
+      publisV_ON();
   }
   isOn = !isOn;
+}
+function publisV_ON() 
+{
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+client.on('connect', function () {
+console.log('Connected to MQTT broker');
+client.publish('VFDCNTRL', JSON.stringify({ command: 'VON' }), function (err) {
+  if (err) {
+    console.log("Error on publishing command");
+  } else {
+    console.log("Publisehd command successfully");
+    client.end();
+  }
+});
+});
+
+}
+
+function publishV_OFF()
+{
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+client.on('connect', function () {
+console.log('Connected to MQTT broker');
+client.publish('VFDCNTRL', JSON.stringify({ command: 'VOFF' }), function (err) {
+  if (err) {
+    console.log("Error on publishing command off");
+  } else {
+    console.log("Publisehd command off successfully");
+    client.end();
+  }
+});
+});
+
 }
