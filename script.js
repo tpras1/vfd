@@ -307,7 +307,6 @@ function togglestrt()
       startImage.src = "strt_u.png";
       startImage.alt = "start OFF";
       stopImage.src = "stp.png";
-     
   } 
   else 
   {
@@ -329,14 +328,12 @@ function togglestp()
       stopImage.src = "stp_u.png";
       stopImage.alt = "stop OFF";
       startImage.src = "strt.png";
-      
   } 
   else 
   {
       stopImage.src = "stp.png";
       stopImage.alt = "stop ON";
       startImage.src = "strt_u.png";
-      
       publishStop();
   }
   ispf = !ispf;
