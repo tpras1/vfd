@@ -48,7 +48,7 @@ function sendData()
 
     client.on('connect', function () {
       console.log('Connected to MQTT broker');
-      client.publish('VFDCNTRL', JSON.stringify(data), function (err) {
+      client.publish('VFDSETT', JSON.stringify(data), function (err) {
         if (err) {
           document.getElementById("response").innerHTML = "Error publishing: " + err;
         } else {
