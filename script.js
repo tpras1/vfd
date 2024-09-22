@@ -297,7 +297,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'VOFF' }), function (err) {
 
 }
 
-/*let isp = false;
+let isp = false;
 function togglestrt() 
 {
   const startImage = document.getElementById('strtimg');
@@ -307,14 +307,14 @@ function togglestrt()
       startImage.src = "strt_u.png";
       startImage.alt = "start OFF";
       stopImage.src = "stp.png";
-      publishV_OFF();
+      publishStop();
   } 
   else 
   {
       startImage.src = "strt.png";
       startImage.alt = "start ON";
       stopImage.src = "stp_u.png";
-      publisV_ON();
+      publishStart() ;
   }
   isp = !isp;
 }
@@ -337,7 +337,7 @@ function togglestp()
       stopImage.alt = "stop ON";
       startImage.src = "strt_u.png";
       
-      publisV_ON();
+      publishStop();
   }
   ispf = !ispf;
-} */
+} 
