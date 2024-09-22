@@ -30,6 +30,8 @@ function sendData()
 
     // Prepare the JSON data
     var data = {
+      mqttbroker: mqttBroker ,
+      mqtttopic:mqttopic,
       baudrate: baudrate,
       bit: bit,
       parity: parity,
@@ -46,7 +48,7 @@ function sendData()
 
     client.on('connect', function () {
       console.log('Connected to MQTT broker');
-      client.publish('VFDSETT', JSON.stringify(data), function (err) {
+      client.publish('VFDCNTRL', JSON.stringify(data), function (err) {
         if (err) {
           document.getElementById("response").innerHTML = "Error publishing: " + err;
         } else {
