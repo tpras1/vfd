@@ -34,16 +34,19 @@ nav {
 
 .PO {
     grid-area: PO;
-    background-color :#9068be ;
     background-size: cover;
-    color: rgb(20, 16, 16);
+    color: rgb(55, 57, 69);
+   /* background-color: rgb(220, 221, 225);*/
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 5px;
+    border-left-width: 35px ;
+    border-left-color: rgb(58, 122, 242);
+
 }
 
 .sidebar {
@@ -54,7 +57,6 @@ nav {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     align-items: center;
     color: #000606;
- 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
    
@@ -78,43 +80,48 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 .Digram {
  grid-area: Digram;
-background-color :#e1e8f0 ;
 /*background-color: transparent;*/
 object-fit: cover;
-color: rgb(20, 16, 16);
+color: rgb(55, 57, 69);
 font-size: 16px;
 overflow: hidden;
 text-overflow: ellipsis;
-border: 2px solid #fff;
+border: 0px solid #fff;
 border-radius: 8px;
 box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);	
+border-left-width: 35px ;
+border-left-color: #3D405B;
+
 }
 
 .fetures {
     grid-area: fetures;
-    background-color : #6ed3cf;
     object-fit: cover;
-    color: rgb(20, 16, 16);
+    color: rgb(55, 57, 69);
+    /*background-color:rgb(233, 230, 225) ;*/
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- 
+    border-left-width: 35px ;
+    border-left-color: #d9b061;
 }
 
 .sysarch {
     grid-area: sysarch;
-	 background-color :#e62739 ;
+	 background-color :white ;
         object-fit: cover;
-        color: rgb(20, 16, 16);
+        color: rgb(55, 57, 69);
         font-size: 16px;
 	overflow: hidden;
         text-overflow: ellipsis;
-        border: 2px solid #fff;
+        border: 0px solid #fff;
         border-radius: 8px;
-        box-shadow:  0 0 10px rgba(35, 26, 26, 0.5);
+        box-shadow:  0 0 10px rgba(184, 144, 144, 0.5);
+        border-left-width: 35px ;
+        border-left-color: #9068be;
         }
 
 

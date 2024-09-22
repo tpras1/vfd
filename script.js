@@ -257,11 +257,11 @@ function toggleBreaker()
   {
       breakerImage.src = "CB_ON.png";
       breakerImage.alt = "Circuit Breaker ON";
-      publisV_ON();
+      publishV_ON();
   }
   isOn = !isOn;
 }
-function publisV_ON() 
+function publishV_ON() 
 {
 const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
 
