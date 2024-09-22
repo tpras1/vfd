@@ -307,7 +307,7 @@ function togglestrt()
       startImage.src = "strt_u.png";
       startImage.alt = "start OFF";
       stopImage.src = "stp.png";
-      publishStop();
+     
   } 
   else 
   {
@@ -329,7 +329,7 @@ function togglestp()
       stopImage.src = "stp_u.png";
       stopImage.alt = "stop OFF";
       startImage.src = "strt.png";
-      publishV_OFF();
+      
   } 
   else 
   {
