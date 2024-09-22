@@ -162,17 +162,13 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'off' }), function (err) {
 
 }
 
-
-
-
-
-
 // Attach these publish functions to your buttons
-document.getElementById('startButton').addEventListener('click', publishStart);
-document.getElementById('stopButton').addEventListener('click', publishStop);
+document.getElementById('startbtn').addEventListener('click', publishStart);
+document.getElementById('startbtn').addEventListener('click', togglestrt);
+document.getElementById('stopbtn').addEventListener('click', publishStop);
+document.getElementById('stopbtn').addEventListener('click', togglestp);
 
-
-function toggleButton(activeButtonId) 
+/*function toggleButton(activeButtonId) 
     {
 // Get all buttons
 var buttons = document.querySelectorAll('.button');
@@ -184,7 +180,7 @@ buttons.forEach(button => {
         button.classList.remove('active');
     }               
     });
-    }
+    } */
 
 function setLEDStatus(ledElement, status) 
     {
@@ -304,37 +300,42 @@ function togglestrt()
   const stopImage = document.getElementById('stpimg');
   if (isp) 
     {
-      startImage.src = "strt_u.png";
-      startImage.alt = "start OFF";
-      stopImage.src = "stp.png";
+      //startImage.src = "strt_u.png";
+      //startImage.alt = "start OFF";
+      //stopImage.src = "stp.png";
   } 
   else 
   {
       startImage.src = "strt.png";
       startImage.alt = "start ON";
       stopImage.src = "stp_u.png";
-      publishStart() ;
+      isp = !isp;
   }
-  isp = !isp;
+  //isp = !isp;
 }
 
-let ispf = false;
+//let ispf = false;
 function togglestp() 
 {
   const stopImage = document.getElementById('stpimg');
   const startImage = document.getElementById('strtimg');
-  if (ispf) 
+  if (isp) 
     {
-      stopImage.src = "stp_u.png";
-      stopImage.alt = "stop OFF";
-      startImage.src = "strt.png";
-  } 
-  else 
-  {
+      //stopImage.src = "stp_u.png";
+      //stopImage.alt = "stop OFF";
+      //startImage.src = "strt.png";
+
       stopImage.src = "stp.png";
       stopImage.alt = "stop ON";
       startImage.src = "strt_u.png";
-      publishStop();
+      isp = !isp;
+  } 
+  else 
+  {
+      //stopImage.src = "stp.png";
+      //stopImage.alt = "stop ON";
+      //startImage.src = "strt_u.png";
+
   }
-  ispf = !ispf;
+  //isp = !isp;
 } 
