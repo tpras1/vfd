@@ -114,6 +114,7 @@ border-left-color: #3D405B;
 	 background-color :white ;
         object-fit: cover;
         color: rgb(55, 57, 69);
+        /*color:grey;*/
         font-size: 16px;
 	overflow: hidden;
         text-overflow: ellipsis;
