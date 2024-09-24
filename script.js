@@ -101,11 +101,15 @@ function fetchmq()
       // Update the motor status
       var status = data.stat;
       if (status === 1) {
-        updateMotorStatus('on', 'off', ' ');
-      } else if (status === 2) {
-        updateMotorStatus(' ', 'off', ' ');
-      } else if (status === 3) {
-        updateMotorStatus(' ', ' ', 'error');
+       //updateMotorStatus('on', 'off', ' ');
+        updateIndicator(1);
+      } if (status === 2) {
+       // updateMotorStatus(' ', 'off', ' ');
+        updateIndicator(2);
+      } if (status === 3) 
+        {
+       // updateMotorStatus(' ', ' ', 'error');
+        updateIndicator(3);
       }
     });
 
@@ -184,29 +188,29 @@ buttons.forEach(button => {
     });
     } */
 
-function setLEDStatus(ledElement, status) 
-    {
-        ledElement.classList.remove('red', 'green', 'blink');
+//function setLEDStatus(ledElement, status) 
+ //   {
+  //      ledElement.classList.remove('red', 'green', 'blink');
+//
+   //     if (status === 'on') {
+     //       ledElement.classList.add('red');
+    //    } else if (status === 'off') {
+    //        ledElement.classList.add('green');
+    //    } else if (status === 'error') {
+     //       ledElement.classList.add('red', 'blink');
+    //    }
+  //  }
 
-        if (status === 'on') {
-            ledElement.classList.add('red');
-        } else if (status === 'off') {
-            ledElement.classList.add('green');
-        } else if (status === 'error') {
-            ledElement.classList.add('red', 'blink');
-        }
-    }
-
-function updateMotorStatus(status1, status2, status3) 
-{
-        const led1 = document.getElementById('led1');
-        const led2 = document.getElementById('led2');
-        const led3 = document.getElementById('led3');
-
-        setLEDStatus(led1, status1);
-        setLEDStatus(led2, status2);
-        setLEDStatus(led3, status3);
-}
+//function updateMotorStatus(status1, status2, status3) 
+//{
+//        const led1 = document.getElementById('led1');
+//        const led2 = document.getElementById('led2');
+//        const led3 = document.getElementById('led3');
+//
+//        setLEDStatus(led1, status1);
+//        setLEDStatus(led2, status2);
+//        setLEDStatus(led3, status3);
+//}
 
 function login() {
   const username = document.getElementById('username').value;
@@ -341,3 +345,37 @@ function togglestp()
   }
   //isp = !isp;
 } 
+
+function updateIndicator(lt) 
+{
+      
+  const vfdon = document.getElementById('PWR_ON');
+  const pumpon = document.getElementById('PUMP_ON');
+  const vfderr = document.getElementById('VFD_ERR');
+
+      vfdon.src = "light_off.png";
+      pumpon.src= "light_off.png";
+      vfderr.src = "light_off.png";
+
+  if(lt===1)
+  {
+    vfdon.src = "green_light.png";
+    pumpon.src= "green_light.png";
+    vfderr.src = "light_off.png"; 
+  }
+
+  if(lt===2)
+    {
+      vfdon.src = "green_light.png";
+      pumpon.src= "light_off.png";
+      vfderr.src = "light_off.png"; 
+    }
+    if(lt===3)
+      {
+        vfdon.src = "yellow_light.png";
+        pumpon.src= "light_off.png";
+        vfderr.src = "red_light.png"; 
+      }
+
+ 
+}
