@@ -14,8 +14,8 @@
         'sidebar PO PO PO sysarch'
         'sidebar PO PO PO sysarch'
         'sidebar PO PO PO sysarch'
-        'sidebar Digram fetures fetures sysarch'
-        'sidebar Digram fetures fetures sysarch'
+        'sidebar Digram Digram fetures sysarch'
+        'sidebar Digram Digram fetures sysarch'
         'sidebar footer footer footer footer';
     grid-gap: .9rem;
     /*font-size: 2rem;*/
@@ -81,7 +81,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 .Digram {
  grid-area: Digram;
 /*background-color: transparent;*/
-object-fit: cover;
+background-size:cover;
 color: rgb(55, 57, 69);
 font-size: 16px;
 overflow: hidden;
@@ -91,6 +91,8 @@ border-radius: 8px;
 box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);	
 border-left-width: 35px ;
 border-left-color: #3D405B;
+background-image: url('https://tpras1.github.io/vfd/VFD_ARCH2.png');
+background-repeat: no-repeat;
 
 }
 
