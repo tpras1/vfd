@@ -445,7 +445,8 @@ text-align: center;
                 grid-template-columns: 0.1fr 1fr ;
                 grid-template-rows: 1fr;
                 background-repeat: no-repeat;
-                background-size: 80%;
+                /*background-size: 100%;*/
+                background-size: cover;
                 background-position: center;
                 background-color:  #d9d9d9 ;                      
             }
