@@ -438,7 +438,7 @@ text-align: center;
                 display: grid;
                 height: 100vh;
                 color: white;
-                background-image: url('https://tpras1.github.io/vfd/SolarPumpV1.2jpg');
+                background-image: url('https://tpras1.github.io/vfd/VFD_ARCH2.png');
                 grid-template-areas:'sidebar containerl';
                 grid-gap: .9rem;
                 /*font-size: 2rem;*/
