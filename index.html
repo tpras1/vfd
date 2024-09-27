@@ -270,13 +270,20 @@
 <option value="portalnmms">Vodaphone</option>
 <option value="rcomnet">Reliance</option>
 </select>
+
 </div>
 <br>
+<div >
+<center><button class="submit"  type="button" onclick="Read_setting()">Read From EEPROM</button></center>
+</div>
+<div >
+<center><button class="submit"  type="button" onclick="Savesetting()">Save Setting</button></center>
+</div>
 </div>
 <div class="main">
 <h2>Read Register Setting</h2>
 <h5>Address of Slave, Command code, Data, CRC</h5>
-<div class="fakeimg" style="height:290px;">
+<div class="fakeimg1" style="height:290px;">
 <label for="slaveid">SLAVE ID:</label>
 <br>
 <select id="slaveid" style="width:150px">
@@ -322,10 +329,16 @@
 <p></p>
 <!--<br> -->
 <h2>Setting Submit Window</h2>
-<p>2100H--->0000H:PRM SET, 0001H:RUN, 0004H:PARKING, 0006H:FLT</p>
-<div class="fakeimg" style="height:150px;" onclick="sendData()" id="response">
+<div class="fakeimg1" style="height:150px;" onclick="sendData()" id="response">
 <!-- Display the parameters here -->
 </div>
+<div >
+    <button class="submit1"  type="button" onclick="Register_read()">Read Register</button>
+    </div>
+    <div >
+    <button class="submit1"  type="button" onclick="Register_write()">Write Register</button>
+    </div>
+
 </div>
 </div>
 </div>

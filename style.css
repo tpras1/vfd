@@ -187,6 +187,7 @@ grid-template-areas: 'sidebar'
             /* Sidebar/left column */
             .side {
             flex: 30%;
+            color:#888;
 		 background-color: white;
             /*background-color: #f1f1f1;*/
 		border: 1px solid #ddd;
@@ -200,6 +201,7 @@ grid-template-areas: 'sidebar'
             /* Main column */
             .main {
             flex: 70%;
+            color:#888;
             background-color: white;
             padding: 20px;
             /*border-radius: 5px;*/
@@ -210,12 +212,21 @@ grid-template-areas: 'sidebar'
             }
             
             /* Fake image, just for this example */
-            .fakeimg {
+    .fakeimg {
             background-color: #aaa;
             Width: 100%;
             padding: 14px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             border-radius: 5px;
+
+    }
+
+    .fakeimg1 {
+                background-color: #aaa;
+                Width: 50%;
+                padding: 14px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                border-radius: 5px;        
             }
             @media screen and (max-width: 600px) 
             {
@@ -537,3 +548,62 @@ text-align: center;
             place-items: center;
             text-align: center;
         }
+
+        .submit {
+            padding: 5px 10px;
+            width:50%;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #31413c;
+            background-color: #33eecc;
+            border-style: solid;
+            border-color:green ;
+            border-radius: 5px;
+            border-width: 1px;
+            /*box-shadow: 0 2px #999;*/
+          }
+          
+          .submit:hover 
+            {
+                /*background-color: #0e9782;*/
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+          
+          .submit:active {
+            background-color: #2bc7a3;
+            /*box-shadow: 0 2px #858484;*/
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+          }
+
+          .submit1 {
+            padding: 5px 10px;
+            width:20%;
+            margin-left: 90px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #31413c;
+            background-color: #33eecc;
+            border-style: solid;
+            border-color:green ;
+            border-radius: 5px;
+            border-width: 1px;
+            /*box-shadow: 0 2px #999;*/
+          }
+          
+          .submit1:hover 
+            {
+                /*background-color: #0e9782;*/
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+          
+          .submit1:active {
+            background-color: #2bc7a3;
+            /*box-shadow: 0 2px #858484;*/
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+          }
