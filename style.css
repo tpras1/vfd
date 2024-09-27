@@ -81,7 +81,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 .Digram {
  grid-area: Digram;
 /*background-color: transparent;*/
-background-size:cover;
+background-size:contain;
 color: rgb(55, 57, 69);
 font-size: 16px;
 overflow: hidden;
