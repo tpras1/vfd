@@ -14,7 +14,7 @@ function removesection()
       sections[i].classList.remove('active');
 }
 }
-/*function sendData() 
+function sendData() 
 {
     var mqttBroker = document.getElementById("mqttBroker").value;
     var mqttopic = document.getElementById("mqttopic").value;
@@ -52,7 +52,7 @@ function removesection()
         if (err) {
           document.getElementById("response").innerHTML = "Error publishing: " + err;
         } else {
-          document.getElementById("response").innerHTML = "Data published successfully!";
+          document.getElementById("response").innerHTML = "Communication & Register Data published successfully! -Through VFDSETT";
           client.end();
         }
       });
@@ -63,12 +63,12 @@ function removesection()
       console.log('Connection error:', err);
       document.getElementById("response").innerHTML = "MQTT connection error: " + err;
     });
-}*/
+}
 
 
 
 
-function Save_setting()
+/*function Save_setting()
 {
     var mqttBroker = document.getElementById("mqttBroker").value;
     var mqttopic = document.getElementById("mqttopic").value;
@@ -107,7 +107,7 @@ function Save_setting()
       console.log('Connection error:', err);
       document.getElementById("response").innerHTML = "MQTT connection error: " + err;
     });
-}
+} */
 function Set_IOT()
 {
 
@@ -115,12 +115,13 @@ function Set_IOT()
   
   client.on('connect', function () {
   console.log('Connected to MQTT broker');
-  client.publish('VFDCNTRL', JSON.stringify({ command: 'WREE' }), function (err) {
+  client.publish('VFDCNTRL', JSON.stringify({ command: 'WRIOT' }), function (err) {
     if (err) {
-      console.log("Error on publishing command off");
+      console.log("Error on publishing command EREE");
+      document.getElementById("response").innerHTML = "Error WRIOT publishing through VFDCNTRL" + err;
     } else {
-      console.log("Publisehd command off successfully");
-      document.getElementById("response").innerHTML = "Command WREE published successfully!Through VFDCNTRL";
+      console.log("Publisehd command EREE successfully");
+      document.getElementById("response").innerHTML = "Command WRIOT published successfully!Through VFDCNTRL";
       client.end();
     }
   });
@@ -129,7 +130,7 @@ function Set_IOT()
 }
 
 
-function publish_reg()
+/* function publish_reg()
 {
   var slaveid = document.getElementById("slaveid").value;
   var command = document.getElementById("command").value;
@@ -166,53 +167,103 @@ function publish_reg()
     console.log('Connection error:', err);
     document.getElementById("response").innerHTML = "MQTT connection error: " + err;
   });
-}
+} */
 
 function publish_reg_wr()
 {
-  var slaveid = document.getElementById("slaveid").value;
-  var command = document.getElementById("command").value;
-  var startaddr = document.getElementById("startaddr").value;
-  var noreg = document.getElementById("noreg").value;
-  var writedata = document.getElementById("writedata").value;
-  var wregister;
-
-  // Prepare the JSON data
-  var data2 = {
-    slaveid: slaveid,
-    command: command,
-    startaddr: startaddr,
-    noreg: noreg,
-    writedata: writedata,
-    wregister:'wreg'
-  };
-
-  // Connect to the MQTT broker
   const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
-
+  
   client.on('connect', function () {
-    console.log('Connected to MQTT broker');
-    client.publish('VFDSETT', JSON.stringify(data2), function (err) {
-      if (err) {
-        document.getElementById("response").innerHTML = "Error publishing: " + err;
-      } else {
-        document.getElementById("response").innerHTML = "Register data with 'wreg' command published successfully! through VFDSETT";
-        client.end();
-      }
-    });
+  console.log('Connected to MQTT broker');
+  client.publish('VFDCNTRL', JSON.stringify({ command: 'WRREG' }), function (err) {
+    if (err) {
+      console.log("Error on publishing command WRREG");
+      ocument.getElementById("response").innerHTML = "Error on publishing command WRREG" + err;
+    } else {
+      console.log("Publisehd command WRREG successfully");
+      document.getElementById("response").innerHTML = "Command WREG published successfully!Through VFDCNTRL";
+      client.end();
+    }
   });
-
-  // Handle connection errors
-  client.on('error', function (err) {
-    console.log('Connection error:', err);
-    document.getElementById("response").innerHTML = "MQTT connection error: " + err;
   });
 }
 
+function Read_setting() 
+{
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+client.on('connect', function () {
+console.log('Connected to MQTT broker');
+client.publish('VFDCNTRL', JSON.stringify({ command: 'EEDATP' }), function (err) {
+  if (err) {
+    console.log("Error on publishing command");
+    ocument.getElementById("response").innerHTML = "Error on publishing command WRREG" + err;
+  } else {
+    console.log("Publisehd command successfully");
+    document.getElementById("response").innerHTML = "Command EEDATP published successfully!Through VFDCNTRL";
+    client.end();
+  }
+});
+});
+
+}
+
+/*function Read_setting() 
+{
+    // Connect to the MQTT broker
+    const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+
+    // Define the onConnect callback
+    client.on('connect', function () {
+      console.log("Connected to MQTT broker");
+      client.subscribe('EEPROMDATA', function (err) {
+        if (!err) {
+          console.log("Subscribed to topic: EEPROMDATA");
+          document.getElementById("response").innerHTML = " Successfull in Suscribing EEPROMDATA topic";
+        } else {
+          console.error("Failed to subscribe:", err);
+           document.getElementById("response").innerHTML = "Failed to subscribe:", + err;
+        }
+      });
+    });
+
+    // Handle incoming messages
+    client.on('message', function (topic, message) {
+      console.log("Message received:", message.toString());
+
+      // Parse the JSON message
+      const data5 = JSON.parse(message.toString());
+
+      // Update the setting elemets with the respective data
 
 
+          document.getElementById("mqttBroker").value = data5.mqttBrokere;
+          document.getElementById("mqttopic").value = data5.mqttTopice;
+          document.getElementById("baudrate").value = data5.baudratee;
+          document.getElementById("bit").value = data5.bite;
+          document.getElementById("parity").value = data5.paritye;
+          document.getElementById("apn").value = data5.apne;
+          document.getElementById("slaveid").value = data5.slaveide;
+          document.getElementById("command").value = data5.commande;
+          document.getElementById("startaddr").value = data5.startaddre;
+          document.getElementById("noreg").value = data5.norege;
+          document.getElementById("writedata").value = data5.writedatae;
+    });
+
+    // Handle connection errors
+    client.on('error', function (err) {
+      console.error("Connection error:", err);
+      document.getElementById("response").innerHTML = " connection error ", + err;
+    });
+
+    // Handle client disconnect
+    client.on('close', function () {
+      console.log("Disconnected from MQTT broker");
+      document.getElementById("response").innerHTML = "Disconnected from MQTT broker";
+    });
 
 
+}*/
 
 
 
@@ -415,7 +466,7 @@ function toggleBreaker()
 }
 function publishV_ON() 
 {
-const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mtqt');
 
 client.on('connect', function () {
 console.log('Connected to MQTT broker');
@@ -529,3 +580,65 @@ function updateIndicator(lt)
 
  
 }
+
+function onMessageReceived(topic, message) 
+{
+  console.log(`Message received on topic '${topic}': ${message.toString()}`);
+  document.getElementById("response").innerHTML = "Message received on topic" + topic + message.toString();
+
+  // Convert the MQTT message to a string and try to parse it as JSON
+  if (topic === "EPROMDATA")
+  {
+  try {
+      var jsonData = JSON.parse(message.toString());
+
+      // Check if required parameters exist in the JSON
+      document.getElementById("mqttBroker").value = data5.mqttBrokere;
+          document.getElementById("mqttopic").value = data5.mqttTopice;
+          document.getElementById("baudrate").value = data5.baudratee;
+          document.getElementById("bit").value = data5.bite;
+          document.getElementById("parity").value = data5.paritye;
+          document.getElementById("apn").value = data5.apne;
+          document.getElementById("slaveid").value = data5.slaveide;
+          document.getElementById("command").value = data5.commande;
+          document.getElementById("startaddr").value = data5.startaddre;
+          document.getElementById("noreg").value = data5.norege;
+          document.getElementById("writedata").value = data5.writedatae;
+
+  }
+   catch (e) 
+  {
+      console.error("Error parsing JSON message:", e);
+      document.getElementById("response").innerHTML = "Error parsing JSON message" + e ;
+  }
+}
+}
+// Callback function after a successful subscription
+function onSubscriptionSuccess(err) 
+{
+  if (!err) 
+    {
+      console.log("Successfully subscribed to topic");
+  } 
+  else 
+  {
+      console.error("Error subscribing to topic:", err);
+  }
+}
+
+// Connect to the MQTT broker
+const client = mqtt.connect('wss://test.mosquitto.org:8081/mtqt');  // Replace with your broker URL
+
+// When the client connects to the broker
+client.on('connect', function () {
+  console.log("Connected to broker");
+
+  // Subscribe to the topic with a callback for the subscription
+  client.subscribe('EEPROMDATA', onSubscriptionSuccess);
+});
+
+// When a message is received
+client.on('message', onMessageReceived);
+
+
+
