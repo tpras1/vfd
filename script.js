@@ -175,6 +175,7 @@ function publish_reg_wr()
   var startaddr = document.getElementById("startaddr").value;
   var noreg = document.getElementById("noreg").value;
   var writedata = document.getElementById("writedata").value;
+  var wregister;
 
   // Prepare the JSON data
   var data2 = {
@@ -183,7 +184,7 @@ function publish_reg_wr()
     startaddr: startaddr,
     noreg: noreg,
     writedata: writedata,
-    command:'wreg'
+    wregister:'wreg'
   };
 
   // Connect to the MQTT broker

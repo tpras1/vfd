@@ -639,3 +639,10 @@ text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             transform: translateY(2px);
           }
+          .topic
+          {
+            height:1px;
+            border-width: 1px;
+            border-color: black;
+
+          }
