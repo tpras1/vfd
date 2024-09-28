@@ -223,7 +223,7 @@
 <br>
 <label for="mqttopic">MQTT TOPIC:</label>
 <br>
-<input class="topic" id="mqttopic" style="width:150px" style="height:2px;" type="text">
+<input class="topic" id="mqttopic"  type="text">
 <!--<option value="TEST">TEST</option>
 <option value="Register">Register</option> -->
 </input>
@@ -307,26 +307,28 @@
 <br>
 <label for="startaddr">START AR:</label>
 <br>
-<select id="startaddr" style="width:150px">
+<input id="startaddr" class="startaddr"> </input>
+<!-- <select id="startaddr" style="width:150px">
 <option value="2100">Read Addr</option>
-<option value="2000">Write Addr</option>
-</select>
-<br>
+<option value="2000">Write Addr</option> 
+</select>-->
 <br>
 <label for="noreg">NUMBER OF REG:</label>
 <br>
 <select id="noreg" style="width:150px">
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="4">4</option>
 </select>
 <br>
 <br>
-<label for="writedata">Data to write:</label>
+<label class="lwritedata" for="writedata">Data to write:</label>
 <br>
-<select id="writedata" style="width:150px">
+<input id="writedata" class="writedata"> </input>
+<!-- <select id="writedata" style="width:150px">
 <option value="0001">Run_Forward</option>
 <option value="0005">Slowdown_Stop</option>
-</select>
+</select> -->
 </div>
 
 <p></p>
@@ -361,12 +363,12 @@
     <li>All free MQTT brkers option given for setting </li>
     <li>MQTT Topic and Port may also be changed in web app manuly </li>
    </ul>
+
 </div>
 <!-- <div class="main2"></div> -->
 
 </div>
 
-</div>
 </div>
 </div>
 </div>
