@@ -55,6 +55,7 @@ function sendData()
           document.getElementById("response").innerHTML = "Error publishing: " + err;
         } else {
           document.getElementById("response").innerHTML = "Communication & Register Data published successfully! -Through VFDSETT";
+          document.getElementById("msg").innerHTML = "submitted JSON thorugh topicVFDSETT :     " + JSON.stringify(data);
           client.end();
         }
       });
@@ -586,16 +587,17 @@ function updateIndicator(lt)
 function onMessageReceived(topic, message) 
 {
   console.log(`Message received on topic '${topic}': ${message.toString()}`);
-  document.getElementById("msg").innerHTML = "Message received on topic" + topic + message.toString();
+  document.getElementById("msg").innerHTML = "Message received on topic:     " + topic + message.toString();
 
   // Convert the MQTT message to a string and try to parse it as JSON
-  if (topic === 'EEPROMDATA')
+  if (topic === "EEPROMDATA")
   {
     /*document.getElementById("msg").innerHTML= "TOPIC EPROMDATA "; */
-  
-    try {
+    try { 
       var jsonData = JSON.parse(message.toString());
-      
+
+       /*document.getElementById("msg").innerHTML= "json done ";*/
+       
       // Check if required parameters exist in the JSON
           document.getElementById("mqttBroker").value = jsonData.mqttbrokere;
           document.getElementById("mqttopic").value = jsonData.mqtttopice;

@@ -188,8 +188,8 @@
 <br>
 <div class="row">
 <div class="side">
-<h2>ESP32 IOT VV401</h2>
-<h5>MQTT Setting</h5>
+<center><h3>ESP32 IOT VV401</h3></center>
+<center><h5>MQTT Setting</h5></center>
 <div class="fakeimg">
 <label for="mqttBroker">MQTT BROKER:</label>
 <br>
@@ -228,7 +228,8 @@
 <option value="Register">Register</option> -->
 </input>
 </div>
-<h3>RS485 I/F Setting</h3>
+<br>
+<center><h5>RS485 I/F Setting</h5></center>
 <div class="fakeimg" style="height:60px;">
 <label for="baudrate">Baud Rate:</label>
 <br>
@@ -284,8 +285,9 @@
 </div>
 </div>
 <div class="main">
-<h2>Read Register Setting</h2>
-<h5>Address of Slave, Command code, Data, CRC</h5>
+<center><h3>Register Setting</h3></center>
+<center><h6>Addr of Slave, CMND Code, Data, CRC</h6></center>
+<br>
 <div class="fakeimg1" style="height:290px;">
 <label for="slaveid">SLAVE ID:</label>
 <br>
@@ -333,8 +335,9 @@
 
 <p></p>
 <!--<br> -->
-<h2>Setting Submit Window</h2>
-<div class="fakeimg1" style="height:150px;"  id="response">
+<br>
+<center><h4>Publish Status Window</h4></center>
+<div class="fakeimg3" style="height:150px;"  id="response">
 <!-- Display the parameters here -->
 </div>
 <div >
@@ -368,7 +371,9 @@
    <br>
    <br>
    <br>
-   <div class="fakeimg2" id="msg"><center>Message Payload </center></div>
+   <center><label class="message"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMessage Payload Window&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></label></center>
+   <br>
+   <div class="fakeimg2" id="msg"></div>
 </div>
 <!-- <div class="main2"></div> -->
 
@@ -392,7 +397,7 @@
             <a onclick=" logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
         </div>
        <div class="page1">
-    <h1 align="center">VFD Monitor & Control Dashboard</h1>
+    <h2 align="center" class="head">VFD Monitor & Control Dashboard</h2>
     <div class="dashboard">
 
         <div class="breaker" onclick="toggleBreaker()">VFD Power
