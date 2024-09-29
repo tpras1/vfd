@@ -666,3 +666,15 @@ text-align: center;
           {
         margin-bottom:-1px;
           }
+          .fakeimg2 {
+            background-color: black;
+            color:#33eecc;
+            word-wrap: break-word ;
+            font-size: 12px;
+            height:40%;
+            Width:300px ;
+            margin:auto;
+            padding: 14px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            border-radius: 5px;        
+        }

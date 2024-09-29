@@ -27,6 +27,7 @@ function sendData()
     var startaddr = document.getElementById("startaddr").value;
     var noreg = document.getElementById("noreg").value;
     var writedata = document.getElementById("writedata").value;
+    var mqttport = document.getElementById("mqttport").value;
 
     // Prepare the JSON data
     var data = {
@@ -40,7 +41,8 @@ function sendData()
       command: command,
       startaddr: startaddr,
       noreg: noreg,
-      writedata: writedata
+      writedata: writedata,
+      mqttport: mqttport
     };
 
     // Connect to the MQTT broker
@@ -232,22 +234,22 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'EEDATP' }), function (err)
       console.log("Message received:", message.toString());
 
       // Parse the JSON message
-      const data5 = JSON.parse(message.toString());
+      const jsonData = JSON.parse(message.toString());
 
       // Update the setting elemets with the respective data
 
 
-          document.getElementById("mqttBroker").value = data5.mqttBrokere;
-          document.getElementById("mqttopic").value = data5.mqttTopice;
-          document.getElementById("baudrate").value = data5.baudratee;
-          document.getElementById("bit").value = data5.bite;
-          document.getElementById("parity").value = data5.paritye;
-          document.getElementById("apn").value = data5.apne;
-          document.getElementById("slaveid").value = data5.slaveide;
-          document.getElementById("command").value = data5.commande;
-          document.getElementById("startaddr").value = data5.startaddre;
-          document.getElementById("noreg").value = data5.norege;
-          document.getElementById("writedata").value = data5.writedatae;
+          document.getElementById("mqttBroker").value = jsonData.mqttBrokere;
+          document.getElementById("mqttopic").value = jsonData.mqttTopice;
+          document.getElementById("baudrate").value = jsonData.baudratee;
+          document.getElementById("bit").value = jsonData.bite;
+          document.getElementById("parity").value = jsonData.paritye;
+          document.getElementById("apn").value = jsonData.apne;
+          document.getElementById("slaveid").value = jsonData.slaveide;
+          document.getElementById("command").value = jsonData.commande;
+          document.getElementById("startaddr").value = jsonData.startaddre;
+          document.getElementById("noreg").value = jsonData.norege;
+          document.getElementById("writedata").value = jsonData.writedatae;
     });
 
     // Handle connection errors
@@ -584,26 +586,29 @@ function updateIndicator(lt)
 function onMessageReceived(topic, message) 
 {
   console.log(`Message received on topic '${topic}': ${message.toString()}`);
-  document.getElementById("response").innerHTML = "Message received on topic" + topic + message.toString();
+  document.getElementById("msg").innerHTML = "Message received on topic" + topic + message.toString();
 
   // Convert the MQTT message to a string and try to parse it as JSON
-  if (topic === "EPROMDATA")
+  if (topic === 'EEPROMDATA')
   {
-  try {
+    /*document.getElementById("msg").innerHTML= "TOPIC EPROMDATA "; */
+  
+    try {
       var jsonData = JSON.parse(message.toString());
-
+      
       // Check if required parameters exist in the JSON
-      document.getElementById("mqttBroker").value = data5.mqttBrokere;
-          document.getElementById("mqttopic").value = data5.mqttTopice;
-          document.getElementById("baudrate").value = data5.baudratee;
-          document.getElementById("bit").value = data5.bite;
-          document.getElementById("parity").value = data5.paritye;
-          document.getElementById("apn").value = data5.apne;
-          document.getElementById("slaveid").value = data5.slaveide;
-          document.getElementById("command").value = data5.commande;
-          document.getElementById("startaddr").value = data5.startaddre;
-          document.getElementById("noreg").value = data5.norege;
-          document.getElementById("writedata").value = data5.writedatae;
+          document.getElementById("mqttBroker").value = jsonData.mqttbrokere;
+          document.getElementById("mqttopic").value = jsonData.mqtttopice;
+          document.getElementById("baudrate").value = jsonData.baudratee;
+          document.getElementById("bit").value = jsonData.bite;
+          document.getElementById("parity").value = jsonData.paritye;
+          document.getElementById("apn").value = jsonData.apne;
+          document.getElementById("slaveid").value= jsonData.slaveide;
+          document.getElementById("command").value = jsonData.commande;
+          document.getElementById("startaddr").value = jsonData.startaddre;
+          document.getElementById("noreg").value = jsonData.norege;
+          document.getElementById("writedata").value = jsonData.writedatae;
+          document.getElementById("mqttport").value = jsonData.mqttporte;
 
   }
    catch (e) 
@@ -640,5 +645,9 @@ client.on('connect', function () {
 // When a message is received
 client.on('message', onMessageReceived);
 
-
+function clear_window()
+{
+  document.getElementById("response").innerHTML = null;
+  document.getElementById("msg").innerHTML = null;
+}
 
