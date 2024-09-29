@@ -19,8 +19,9 @@
         'sidebar footer footer footer footer';
     grid-gap: 1.9rem;
     /*font-size: 2rem;*/
-    grid-template-columns: 0.4fr 1fr 1fr .5fr .9fr ;
+    grid-template-columns: 0.4fr 1fr .75fr .75fr .9fr ;
     grid-template-rows: .5fr 1fr .3fr .4fr 2fr 1.5fr 1fr;
+    margin-right: 30px;
 }
 
 nav {
@@ -35,9 +36,9 @@ nav {
 .PO {
     grid-area: PO;
     background-size: cover;
-    color: rgb(55, 57, 69);
+    /*color: rgb(55, 57, 69);*/
    /* background-color: rgb(220, 221, 225);*/
-    font-size: 16px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     border: 0px solid #fff;
@@ -46,6 +47,8 @@ nav {
     padding: 5px;
     border-left-width: 35px ;
     border-left-color: rgb(58, 122, 242);
+    /*color:rgb(58, 122, 242);*/
+    color:grey;
 
 }
 
@@ -91,6 +94,7 @@ border-radius: 8px;
 box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);	
 border-left-width: 35px ;
 border-left-color: #3D405B;
+background-position: center;
 background-image: url('https://tpras1.github.io/vfd/VFD_ARCH2.png');
 background-repeat: no-repeat;
 
@@ -99,9 +103,9 @@ background-repeat: no-repeat;
 .fetures {
     grid-area: fetures;
     object-fit: cover;
-    color: rgb(55, 57, 69);
+    /*color: rgb(55, 57, 69);*/
     /*background-color:rgb(233, 230, 225) ;*/
-    font-size: 16px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     border: 0px solid #fff;
@@ -109,15 +113,17 @@ background-repeat: no-repeat;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-left-width: 35px ;
     border-left-color: #d9b061;
+    /*color: #d9b061;*/
+    color:grey;
 }
 
 .sysarch {
     grid-area: sysarch;
 	 background-color :white ;
         object-fit: cover;
-        color: rgb(55, 57, 69);
+        /*color: rgb(55, 57, 69);*/
         /*color:grey;*/
-        font-size: 16px;
+        font-size: 12px;
 	overflow: hidden;
         text-overflow: ellipsis;
         border: 0px solid #fff;
@@ -125,6 +131,8 @@ background-repeat: no-repeat;
         box-shadow:  0 0 10px rgba(184, 144, 144, 0.5);
         border-left-width: 35px ;
         border-left-color: #9068be;
+        /*color: #9068be;*/
+        color:grey;
         }
 
 
