@@ -17,7 +17,7 @@
         'sidebar Digram Digram fetures sysarch'
         'sidebar Digram Digram fetures sysarch'
         'sidebar footer footer footer footer';
-    grid-gap: 2.9rem;
+    grid-gap: 1.9rem;
     /*font-size: 2rem;*/
     grid-template-columns: 0.4fr 1fr 1fr .5fr .9fr ;
     grid-template-rows: .5fr 1fr .3fr .4fr 2fr 1.5fr 1fr;
@@ -290,16 +290,17 @@ color: black;
 
   .dashboard {
 	position :relative;
-    top: 40px;
+   top: 40px;
     background-color: white; /*url("images/danielle-suijkerbuijk-t6OcOMpvgJI-unsplash.jpg"); */
  	/*background-color: white;*/
     color: lightgrey;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: top;
-    height: 55vh;
-    margin: 40px; /* chages margin from 40px */
+   /*align-items: top;*/
+    /*height: 100%;*/
+
+    /*margin: 40px; */ /* chages margin from 40px */
     flex-wrap: wrap;
     /*display: grid;*/
     /*grid-template-columns: repeat(3, 400px);*/
@@ -446,6 +447,7 @@ text-align: center;
         .page1{
             grid-area: page1;
             color: black; 
+            height:100%;
             }
 
             
@@ -702,5 +704,5 @@ text-align: center;
         .head
         {
         color: grey;
-        margin-top: 40px;
+        margin-top: 50px;
         }   
