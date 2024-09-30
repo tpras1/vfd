@@ -125,6 +125,7 @@ function Set_IOT()
     } else {
       console.log("Publisehd command EREE successfully");
       document.getElementById("response").innerHTML = "Command WRIOT published successfully!Through VFDCNTRL";
+      document.getElementById("msg").innerHTML = "{ command: 'WRIOT' }";
       client.end();
     }
   });
@@ -185,6 +186,7 @@ function publish_reg_wr()
     } else {
       console.log("Publisehd command WRREG successfully");
       document.getElementById("response").innerHTML = "Command WREG published successfully!Through VFDCNTRL";
+      document.getElementById("msg").innerHTML = "{ command: 'WRREG' }";
       client.end();
     }
   });
@@ -204,6 +206,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'EEDATP' }), function (err)
   } else {
     console.log("Publisehd command successfully");
     document.getElementById("response").innerHTML = "Command EEDATP published successfully!Through VFDCNTRL";
+    document.getElementById("msg").innerHTML ="{ command: 'EEDATP' }";
     client.end();
   }
 });
@@ -293,6 +296,7 @@ function fetchmq()
 
       // Parse the JSON message
       const data = JSON.parse(message.toString());
+      document.getElementById("msg").innerHTML = "Subscibed JSON thorugh topic VFDSETT     : " + data ;
 
       // Update the gauges with the respective data
     document.getElementById('freq').setAttribute('data-value', data.freq);
@@ -347,6 +351,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'on' }), function (err) {
     console.log("Error on publishing command");
   } else {
     console.log("Publisehd command successfully");
+    document.getElementById("msg").innerHTML = "Published topic :VFDCNRL  { command: 'on' }  " ;
     client.end();
   }
 });
@@ -365,6 +370,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'off' }), function (err) {
     console.log("Error on publishing command off");
   } else {
     console.log("Publisehd command off successfully");
+    document.getElementById("msg").innerHTML = "Published topic :VFDCNRL  { command: 'off' }  " ;
     client.end();
   }
 });
@@ -478,6 +484,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'VON' }), function (err) {
     console.log("Error on publishing command");
   } else {
     console.log("Publisehd command successfully");
+    document.getElementById("msg").innerHTML = "Published topic :VFDCNRL  { command: 'VON' }  " ;
     client.end();
   }
 });
@@ -496,6 +503,7 @@ client.publish('VFDCNTRL', JSON.stringify({ command: 'VOFF' }), function (err) {
     console.log("Error on publishing command off");
   } else {
     console.log("Publisehd command off successfully");
+    document.getElementById("msg").innerHTML = "Published topic :VFDCNRL  { command: 'VOFF' }  " ;
     client.end();
   }
 });
