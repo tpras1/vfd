@@ -300,11 +300,18 @@ function fetchmq()
 
       // Update the gauges with the respective data
     document.getElementById('freq').setAttribute('data-value', data.freq);
+    document.getElementById("dash").innerHTML = "Out Put Frequncy = "+data.freq +"<br>"+"Out Put Current = " +data.cur+"<br>"+
+    "Drive Motor Speed = "+data.spd+"<br>"+"VFDriveTemrature = "+data.temp+"<br>"+"VFD Output Voltage = "+data.volt+"<br>"+"Solar String Voltage = "+data.svolt;
     document.getElementById('amp').setAttribute('data-value', data.cur);
+    //document.getElementById("dash").innerHTML = "O/P Current = "+data.cur;
     document.getElementById('spd').setAttribute('data-value', data.spd);
+    //document.getElementById("dash").innerHTML = "Motor Speed = "+data.spd;
     document.getElementById('temp').setAttribute('data-value', data.temp);
+    //document.getElementById("dash").innerHTML = "VFD Temrature = "+data.temp;
     document.getElementById('vlt').setAttribute('data-value', data.volt);
+    //document.getElementById("dash").innerHTML = "VFD Output Voltage = "+data.volt;
     document.getElementById('strvlt').setAttribute('data-value', data.svolt);
+    //document.getElementById("dash").innerHTML = "Solar String Voltage = "+data.svolt;
 
       // Update the motor status
       var status = data.stat;

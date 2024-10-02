@@ -714,3 +714,25 @@ text-align: center;
         color: grey;
         margin-top: 50px;
         }   
+
+        .im 
+        {
+            position: absolute;
+z-index: 0 ;
+        }
+
+        .fakeimg4 {
+            position: absolute;
+            margin-left: 48px;
+            margin-top: 48px;
+            background-color: black;
+            color:#33eecc;
+            word-wrap: break-word ;
+            overflow: hidden;
+            font-size: 12px;
+            height: 110px;
+            Width:155px ;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            border-radius: 5px; 
+         z-index: 1 ;
+        }
