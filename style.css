@@ -717,28 +717,40 @@ text-align: center;
 
         .im 
         {
-            position: absolute;
-            overflow: hidden;
-            border-width: 10px;
-            border-color:grey;
-         
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        
+            /*overflow: hidden;*/
+            border-width: 5px;
+            border-color: grey;
+            /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);*/
 
 z-index: 0 ;
         }
 
         .fakeimg4 {
             position: absolute;
-            margin-left: 48px;
-            margin-top: 48px;
+            top: 22px;
+            left: 78px;
             background-color: black;
             color:#33eecc;
             word-wrap: break-word ;
             overflow: hidden;
-            font-size: 12px;
-            height: 110px;
-            Width:155px ;
+            font-size: 7px;
+            height:72px;
+            Width:103px ;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             border-radius: 5px; 
+            text-align: left;
          z-index: 1 ;
         }
+.VFD        
+{
+position: relative;
+display: grid;
+width: 260px;
+height: 230px;
+background-color: white;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+border-radius: 8px;
+place-items: center; 
+
+}
