@@ -687,7 +687,7 @@ text-align: center;
             Width:300px ;
             margin:auto;
             padding: 14px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            
             border-radius: 5px; 
                    
         }
@@ -718,6 +718,12 @@ text-align: center;
         .im 
         {
             position: absolute;
+            overflow: hidden;
+            border-width: 10px;
+            border-color:grey;
+         
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
 z-index: 0 ;
         }
 
