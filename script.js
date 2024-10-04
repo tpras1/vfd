@@ -572,29 +572,39 @@ function updateIndicator(lt)
   const vfdon = document.getElementById('PWR_ON');
   const pumpon = document.getElementById('PUMP_ON');
   const vfderr = document.getElementById('VFD_ERR');
-
+  const vfdon1 =document.getElementById("PWR_ON1");
+  const pumpon1 =document.getElementById("PUMP_ON1");
       vfdon.src = "ledoff.png";
       pumpon.src= "ledoff.png";
       vfderr.src = "ledoff.png";
+      vfdon1.src = "ledoff.png";
+      pumpon1.src= "ledoff.png";
 
   if(lt===1)
   {
     vfdon.src = "green_led.png";
     pumpon.src= "green_led.png";
     vfderr.src = "ledoff.png"; 
+    vfdon1.src = "red_led.png";
+    pumpon1.src= "green_led.png";
   }
 
   if(lt===2)
     {
       vfdon.src = "green_led.png";
-      pumpon.src= "led_off.png";
-      vfderr.src = "led_off.png"; 
+      pumpon.src= "ledoff.png";
+      vfderr.src = "ledoff.png"; 
+      vfdon1.src = "red_led.png";
+      pumpon1.src= "ledoff.png";
+
     }
     if(lt===3)
       {
         vfdon.src = "yellow_led.png";
-        pumpon.src= "led_off.png";
+        pumpon.src= "ledoff.png";
         vfderr.src = "red_led.png"; 
+        vfdon1.src = "yellow_led.png";
+        pumpon1.src= "ledoff.png";
       }
 
  

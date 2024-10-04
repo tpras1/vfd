@@ -765,3 +765,21 @@ border-radius: 8px;
 place-items: center; 
 
 }
+#PWR_ON1
+{
+position: absolute;
+top: 168px;
+left: 23px;
+z-index: 1
+
+
+}
+
+#PUMP_ON1
+{
+position: absolute;
+top: 168px;
+right: 24px;
+z-index: 1
+
+}
