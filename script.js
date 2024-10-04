@@ -391,6 +391,12 @@ document.getElementById('startbtn').addEventListener('click', publishStart);
 document.getElementById('startbtn').addEventListener('click', togglestrt);
 document.getElementById('stopbtn').addEventListener('click', publishStop);
 document.getElementById('stopbtn').addEventListener('click', togglestp);
+document.getElementById('startbtn1').addEventListener('click', publishStart);
+document.getElementById('startbtn1').addEventListener('click', togglestrt);
+document.getElementById('stopbtn1').addEventListener('click', publishStop);
+document.getElementById('stopbtn1').addEventListener('click', togglestp);
+
+
 
 /*function toggleButton(activeButtonId) 
     {
@@ -524,6 +530,8 @@ function togglestrt()
 {
   const startImage = document.getElementById('strtimg');
   const stopImage = document.getElementById('stpimg');
+  const startImage1 = document.getElementById('strtimg1');
+  const stopImage1 = document.getElementById('stpimg1');
   if (isp) 
     {
       //startImage.src = "strt_u.png";
@@ -535,6 +543,10 @@ function togglestrt()
       startImage.src = "strt.png";
       startImage.alt = "start ON";
       stopImage.src = "stp_u.png";
+      startImage1.src = "strt.png";
+      startImage1.alt = "start ON";
+      stopImage1.src = "stp_u.png";
+
       isp = !isp;
   }
   //isp = !isp;
@@ -545,6 +557,10 @@ function togglestp()
 {
   const stopImage = document.getElementById('stpimg');
   const startImage = document.getElementById('strtimg');
+  const stopImage1 = document.getElementById('stpimg1');
+  const startImage1= document.getElementById('strtimg1');
+
+
   if (isp) 
     {
       //stopImage.src = "stp_u.png";
@@ -554,6 +570,12 @@ function togglestp()
       stopImage.src = "stp.png";
       stopImage.alt = "stop ON";
       startImage.src = "strt_u.png";
+      stopImage1.src = "stp.png";
+      stopImage1.alt = "stop ON";
+      startImage1.src = "strt_u.png";
+
+
+
       isp = !isp;
   } 
   else 

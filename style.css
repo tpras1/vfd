@@ -731,23 +731,25 @@ z-index: 0 ;
         {
            
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-color: black;
-            border-width: 5px;
-            /*margin-bottom: 8px;*/
+            height: 230px;
+            width: 140px;
+            /*border-color: black;
+            border-width: 5px; */
+            /*margin-bottom: 8px;*/ 
 
         }
 
         .fakeimg4 {
             position: absolute;
-            top: 24px;
-            left: 18px;
+            top: 22px;
+            left: 15px;
             background-color: black;
             color:#33eecc;
             word-wrap: break-word ;
             overflow: hidden;
             font-size: 7px;
-            height:71px;
-            Width:104px ;
+            height:74px;
+            Width:110px ;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             border-radius: 5px; 
             text-align: left;
@@ -760,7 +762,7 @@ display: grid;
 width: 140px;
 height: 230px;
 background-color: white;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+/*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
 border-radius: 8px;
 place-items: center; 
 
@@ -769,7 +771,7 @@ place-items: center;
 {
 position: absolute;
 top: 168px;
-left: 23px;
+left: 21px;
 z-index: 1
 
 
@@ -779,7 +781,24 @@ z-index: 1
 {
 position: absolute;
 top: 168px;
-right: 24px;
+right: 22px;
 z-index: 1
+
+}
+#strtimg1
+{
+    position: absolute;
+    top: 125px;
+    left: 18px;
+    z-index: 1
+
+}
+#stpimg1
+{
+    position: absolute;
+    top: 125px;
+    right: 19px;
+    z-index: 1
+
 
 }
