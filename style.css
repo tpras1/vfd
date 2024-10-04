@@ -715,28 +715,39 @@ text-align: center;
         margin-top: 50px;
         }   
 
-        .im 
+     /*   .im 
         {
         
-            /*overflow: hidden;*/
+            /*overflow: hidden;
             border-width: 5px;
             border-color: grey;
-            /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);*/
+
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 
 z-index: 0 ;
+        } */
+
+        #VFDimage
+        {
+           
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-width: 5px;
+            /*margin-bottom: 8px;*/
+
         }
 
         .fakeimg4 {
             position: absolute;
-            top: 22px;
-            left: 78px;
+            top: 24px;
+            left: 18px;
             background-color: black;
             color:#33eecc;
             word-wrap: break-word ;
             overflow: hidden;
             font-size: 7px;
-            height:72px;
-            Width:103px ;
+            height:71px;
+            Width:104px ;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             border-radius: 5px; 
             text-align: left;
@@ -746,7 +757,7 @@ z-index: 0 ;
 {
 position: relative;
 display: grid;
-width: 260px;
+width: 140px;
 height: 230px;
 background-color: white;
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
