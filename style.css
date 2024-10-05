@@ -43,7 +43,7 @@ nav {
     text-overflow: ellipsis;
     border: 0px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
     padding: 5px;
     border-left-width: 35px ;
     border-left-color: rgb(58, 122, 242);
@@ -110,7 +110,7 @@ background-repeat: no-repeat;
     text-overflow: ellipsis;
     border: 0px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
     border-left-width: 35px ;
     border-left-color: #d9b061;
     /*color: #d9b061;*/
@@ -128,7 +128,7 @@ background-repeat: no-repeat;
         text-overflow: ellipsis;
         border: 0px solid #fff;
         border-radius: 8px;
-        box-shadow:  0 0 10px rgba(184, 144, 144, 0.5);
+        box-shadow:  0 0 7px rgba(184, 144, 144, 0.5);
         border-left-width: 35px ;
         border-left-color: #9068be;
         /*color: #9068be;*/
