@@ -518,7 +518,7 @@ text-align: center;
                 border-radius: 5px;
                 width: 400px;
                 height: 300px;
-                opacity: 0.88;
+                /*opacity: 0.88;*/
                 /*margin: 0 auto;*/
                 
             }
@@ -733,6 +733,8 @@ z-index: 0 ;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             height: 230px;
             width: 140px;
+            border: 2px solid grey;
+            border-radius: 8px;
             /*border-color: black;
             border-width: 5px; */
             /*margin-bottom: 8px;*/ 
