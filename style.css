@@ -36,8 +36,12 @@ nav {
 .PO {
     grid-area: PO;
     background-size: cover;
+    display:grid;
+    grid-template-areas: 'agro1 agro';
     /*color: rgb(55, 57, 69);*/
    /* background-color: rgb(220, 221, 225);*/
+   grid-template-columns: 2.5fr .5fr;
+   grid-template-rows:1fr;
     font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -815,4 +819,14 @@ background-color: white;
 /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
 border-radius: 8px;
 place-items: center; 
+}
+#agro
+{
+box-shadow: 0 0 5px rgba(67, 86, 89, 0.662);
+border-radius: 8px;
+}
+.agro1
+{
+    line-height: 115%;
+    font-size: 14px;
 }
