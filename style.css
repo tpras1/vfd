@@ -813,6 +813,7 @@ z-index: 1
 position: relative;
 margin: auto;
 display: grid;
+top: 100px;
 width: 140px;
 height: 230px;
 background-color: white;
@@ -824,9 +825,21 @@ place-items: center;
 {
 box-shadow: 0 0 5px rgba(67, 86, 89, 0.662);
 border-radius: 8px;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 10px;
+
 }
 .agro1
 {
     line-height: 115%;
     font-size: 14px;
+}
+#iotgate
+{
+    box-shadow: 0 0 5px rgba(67, 86, 89, 0.662);
+    border-radius: 8px;
+    margin:auto;
+    image-rendering: auto;
+  
 }
