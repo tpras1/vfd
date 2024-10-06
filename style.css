@@ -92,6 +92,8 @@ background-size:contain;
 color: rgb(55, 57, 69);
 font-size: 16px;
 overflow: hidden;
+margin-right: 30px;
+margin-top: 30px;
 text-overflow: ellipsis;
 border: 0px solid #fff;
 border-radius: 8px;
@@ -106,10 +108,10 @@ background-repeat: no-repeat;
 
 .fetures {
     grid-area: fetures;
-    object-fit: cover;
+    /*object-fit: cover;*/
     /*color: rgb(55, 57, 69);*/
     /*background-color:rgb(233, 230, 225) ;*/
-    font-size: 12px;
+    /*font-size: 12px;*/
     overflow: hidden;
     text-overflow: ellipsis;
     border: 0px solid #fff;
@@ -119,6 +121,10 @@ background-repeat: no-repeat;
     border-left-color: #d9b061;
     /*color: #d9b061;*/
     color:grey;
+    font-size: 12px;
+    
+    text-align:justify;
+
 }
 
 .sysarch {
@@ -128,6 +134,8 @@ background-repeat: no-repeat;
         /*color: rgb(55, 57, 69);*/
         /*color:grey;*/
         font-size: 12px;
+        text-align:justify;
+        margin-left:30px;
 	overflow: hidden;
         text-overflow: ellipsis;
         border: 0px solid #fff;
@@ -813,7 +821,7 @@ z-index: 1
 position: relative;
 margin: auto;
 display: grid;
-top: 100px;
+top: 5px;
 width: 140px;
 height: 230px;
 background-color: white;
@@ -829,11 +837,18 @@ margin-top: 10px;
 margin-bottom: 10px;
 margin-right: 10px;
 
+
 }
 .agro1
 {
-    line-height: 115%;
+    line-height: 150%;
     font-size: 14px;
+    margin-right: 25px;
+    margin-left: 23px;
+    text-align:justify;
+    color:#3D405B;
+    font:600;
+
 }
 #iotgate
 {
@@ -841,5 +856,26 @@ margin-right: 10px;
     border-radius: 8px;
     margin:auto;
     image-rendering: auto;
-  
+
 }
+
+#fet
+    {
+  
+    font-size: 12px;
+    margin-right: 25px;
+    margin-left: 23px;
+    text-align:justify;
+    color:#3D405B;
+    font:600;
+
+}
+#sysar
+    {
+    font-size: 12px;
+    margin-right: 25px;
+    margin-left: 23px;
+    text-align:justify;
+    color:#3D405B;
+    font:600;
+    }

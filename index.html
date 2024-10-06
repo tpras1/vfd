@@ -70,15 +70,15 @@
                 <center><img src="https://tpras1.github.io/vfd/PR_OvrVw.png" width="45" height="45"></center>
                 <br>
                 <h2 align="center">Project Overview </h2>
-                <br>
+            
                 
       <p>
-    This project was implimented for <b>M.Chanigaraju </b>for his agricultural farm .As continues power availabilty in farm was challenge ,
+    <!--This project was implimented for <b>M.Chanigaraju </b>for his agricultural farm .--> <br>As continues power availabilty in farm was a challenge ,
     decided to go with solar power for submercible bore well water pump.
     The bore well depth was more than 450 feet and to acheive sufficiant flow of water ,CRI 7.5HP water pump was used for carryig out for the pumping need.
-    The specification of motor is 385volt and 15.8 A .In order to acheive sufficiant power ,17 numbers of  monoperc pannel with 49.51 voc and 3.02A (Impp)is used . 
-    For to convert DC to 3 phase AC  variable fequancy drive of Crompton Greaves is used . TO monitor VFD remotely VajraVega IOT gateway module is used . 
-    The gate way have ESP32 controller with 4G LTE module with remote connectivity and the VFD controller interface is RS485 based modbus controller . 
+    The specification of motor is 385volt and 15.8 A .In order to acheive sufficiant power ,17 numbers of  monoperc pannel with 49.51 voc and 3.02A (Impp)is used .
+    For to convert DC to 3 phase AC  variable fequancy drive of Crompton Greaves is used . To monitor VFD remotely VajraVega IOT gateway module is used .
+    The gate way have ESP32 controller with 4G LTE module with remote connectivity and the VFD controller interface is RS485 based modbus controller .
     The remote monitoring acheived through MQTT protocol with web based dashboard 
 
       </p>
@@ -87,6 +87,9 @@
          </div>
                 
          	<div class="Digram" id="2">
+
+                
+
 	
 		<!--<center><img src="https://tpras1.github.io/vfd/VFD_ARCH2.png" alt="Architecture" ></center> -->
 
@@ -95,9 +98,11 @@
         <div class="fetures" id="3">
 
 	<center><img src="https://tpras1.github.io/vfd/PR_Fet.png" alt="The" width="40" height="40"></center>
-   <center><h3>Key Features</h3></center>
-                    
- <p> 
+            
+ 
+        <div class="fetures1" id="fet">
+            <center><h3>Key Features</h3></center>  
+   <p> 
 
 <b>ESP32 Microcontroller:</b> A low-power, dual-core microcontroller with built-in Wi-Fi and Bluetooth, ideal for IoT applications.</p>
 <p>
@@ -114,18 +119,20 @@
 <p>
 <b>Cloud Connectivity:</b> Data is transmitted to a cloud platform for logging, analytics, and alerting, providing insights into pump performan
    </p>  
+   </div>
    <br>
-   <center><img id="iotgate" src="https://tpras1.github.io/vfd/iotgate.png" alt="The" width="250" height="100"></center>
+   <center><img id="iotgate" src="https://tpras1.github.io/vfd/iotgate.png" alt="The" width="250" height="70"></center>
 
 	</div>
 
         <div id="4" class="sysarch">
 
 	<center><img src="https://tpras1.github.io/vfd/16077278.png" alt="The" width="50" height="50"  class="center"></center>
-    <center><h3> 
-     System Architecture </h3></center>
+    
+    <div id="sysar" class="sysarch1">
+    <center><h3> System Architecture </h3></center>
     <p>
-
+<br>
 <b>ESP32 Module:</b> Acts as the brain of the system, handling all communications and data processing tasks.
 </p>
 
@@ -133,46 +140,41 @@
     <p>
         <b>Modbus Interface:</b> Facilitates communication between the ESP32 and the CG VFD, allowing for command and control operations.
         </p>
+    
         <p>
         <b>
         Solar-Powered Pump: </b>The agricultural water pump, powered by solar energy, is controlled via the VFD to ensure optimal operation under varying solar conditions.
         </p>
+        
         <p>
         <b>
-        Cloud Platform: </b>Receives data from the ESP32 gateway, offering a user-friendly interface for monitoring and control.
+        MQTT Broker: </b>Receives data from the ESP32 gateway, offering a user-friendly interface for monitoring and control.
         </p>
+    
         <p>
         <b>
         Variable Frequancy Drive:</b> Converts DC power of solar to regulated 3 phase AC power with frequuncy based drive control. Also has RS485 based MOD BUS RTU for controlling the same through mod bus controller.
                 
-             <!--  </p>
-                <center><img src="https://tpras1.github.io/vfd/VFD.jpg" class ="center"alt="The" width="100" height="150"></center>
-            -->
-
+             </p>
+    </div>
             <br>
             <br>
-            <br>
-            <br>
-            <div class="VFD1">
+                <center><img src="https://tpras1.github.io/vfd/VFD_ARCH2.png" class ="center"alt="The" width="300" height="150"></center>
 
-                <div class="fakeimg4" id="dash"></div>
-                <img id="VFDimage" src="https://tpras1.github.io/vfd/display.png" alt="The"  width="98%" height="98%">
-                <img id="PWR_ON1" src="ledoff.png" alt="Circuit Breaker OFF" width="9" height="9">
-                <img id="PUMP_ON1" src="ledoff.png" alt="Circuit Breaker OFF" width="9" height="9" >
-                
-                <div id="startbtn1" onclick="">
-                <img id="strtimg1"  src="strt_u.png" alt="start OFF" width="26" height="26">
-                </div>
-                <div id="stopbtn1" onclick="">
-                <img id="stpimg1" src="stp_u.png" alt="stop OFF" width="26" height="26">
-                </div>
-            </div>
+                <div class="VFD1">
 
-
-
-
-
-
+                    <div class="fakeimg4" id="dash"></div>
+                    <img id="VFDimage" src="https://tpras1.github.io/vfd/display.png" alt="The"  width="98%" height="98%">
+                    <img id="PWR_ON1" src="ledoff.png" alt="Circuit Breaker OFF" width="9" height="9">
+                    <img id="PUMP_ON1" src="ledoff.png" alt="Circuit Breaker OFF" width="9" height="9" >
+                    
+                    <div id="startbtn1" onclick="">
+                    <img id="strtimg1"  src="strt_u.png" alt="start OFF" width="26" height="26">
+                    </div>
+                    <div id="stopbtn1" onclick="">
+                    <img id="stpimg1" src="stp_u.png" alt="stop OFF" width="26" height="26">
+                    </div>
+                </div> 
 
 </div>		
 
