@@ -14,12 +14,12 @@
         'sidebar PO PO PO sysarch'
         'sidebar PO PO PO sysarch'
         'sidebar PO PO PO sysarch'
-        'sidebar Digram Digram fetures sysarch'
-        'sidebar Digram Digram fetures sysarch'
+        'sidebar Digram fetures fetures sysarch'
+        'sidebar Digram fetures fetures sysarch'
         'sidebar footer footer footer footer';
-    grid-gap: 1.9rem;
+    grid-gap: 3rem;
     /*font-size: 2rem;*/
-    grid-template-columns: 0.4fr 1fr .75fr .75fr .9fr ;
+    grid-template-columns: 0.4fr .5fr .75fr .75fr 1fr ;
     grid-template-rows: .5fr 1fr .3fr .4fr 2fr 1.5fr 1fr;
     margin-right: 30px;
 }
@@ -48,7 +48,7 @@ nav {
     text-overflow: ellipsis;
     border: 0px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 5px;
     border-left-width: 35px ;
     border-left-color: rgb(58, 122, 242);
@@ -88,22 +88,23 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 .Digram {
  grid-area: Digram;
+ margin :auto;
 /*background-color: transparent;*/
-background-size:contain;
+/*background-size:contain;*/
 color: rgb(55, 57, 69);
-font-size: 16px;
-overflow: hidden;
-margin-right: 30px;
-margin-top: 30px;
-text-overflow: ellipsis;
+font-size: 14px;
+/*overflow: hidden;*/
+/*margin-right: 30px;
+margin-top: 30px; */
+/*text-overflow: ellipsis;
 border: 0px solid #fff;
 border-radius: 8px;
-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);	
-border-left-width: 35px ;
+box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);*/	
+/*border-left-width: 35px ;
 border-left-color: #3D405B;
-background-position: center;
-background-image: url('https://tpras1.github.io/vfd/VFD_ARCH2.png');
-background-repeat: no-repeat;
+background-position: center;*/
+/*background-image: url('https://tpras1.github.io/vfd/VFD_ARCH2.png');*/
+/*background-repeat: no-repeat;*/
 
 }
 
@@ -117,13 +118,12 @@ background-repeat: no-repeat;
     text-overflow: ellipsis;
     border: 0px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-left-width: 35px ;
     border-left-color: #d9b061;
     /*color: #d9b061;*/
     color:grey;
     font-size: 12px;
-    
     text-align:justify;
 
 }
@@ -136,12 +136,12 @@ background-repeat: no-repeat;
         /*color:grey;*/
         font-size: 12px;
         text-align:justify;
-        margin-left:30px;
+        /*margin-left:30px;*/
 	overflow: hidden;
         text-overflow: ellipsis;
         border: 0px solid #fff;
         border-radius: 8px;
-        box-shadow:  0 0 7px rgba(184, 144, 144, 0.5);
+        box-shadow:  0 0 20px  rgba(0, 0, 0, 0.5);
         border-left-width: 35px ;
         border-left-color: #9068be;
         /*color: #9068be;*/
@@ -865,8 +865,8 @@ margin-right: 10px;
     {
   
     font-size: 12px;
-    margin-right: 25px;
-    margin-left: 23px;
+    margin-right: 55px;
+    margin-left: 53px;
     text-align:justify;
     color:white;
     /*color:#3D405B;*/
@@ -876,10 +876,17 @@ margin-right: 10px;
 #sysar
     {
     font-size: 12px;
-    margin-right: 25px;
-    margin-left: 23px;
+    margin-right: 55px;
+    margin-left: 53px;
     text-align:justify;
     color:whitesmoke;
     /*color:#3D405B;*/
     font:600;
+    }
+    #archdiag
+    {
+        box-shadow: 0 0 15px rgba(67, 86, 89, 0.662);
+        border-radius: 10px;
+        margin:auto;
+
     }
