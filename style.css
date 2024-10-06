@@ -38,6 +38,7 @@ nav {
     background-size: cover;
     display:grid;
     grid-template-areas: 'agro1 agro';
+    background-color:#2e757cf9;
     /*color: rgb(55, 57, 69);*/
    /* background-color: rgb(220, 221, 225);*/
    grid-template-columns: 2.5fr .5fr;
@@ -52,7 +53,7 @@ nav {
     border-left-width: 35px ;
     border-left-color: rgb(58, 122, 242);
     /*color:rgb(58, 122, 242);*/
-    color:grey;
+    color:whitesmoke;
 
 }
 
@@ -110,7 +111,7 @@ background-repeat: no-repeat;
     grid-area: fetures;
     /*object-fit: cover;*/
     /*color: rgb(55, 57, 69);*/
-    /*background-color:rgb(233, 230, 225) ;*/
+    background-color:rgb(130, 142, 151) ;
     /*font-size: 12px;*/
     overflow: hidden;
     text-overflow: ellipsis;
@@ -129,7 +130,7 @@ background-repeat: no-repeat;
 
 .sysarch {
     grid-area: sysarch;
-	 background-color :white ;
+	 background-color :rgb(185, 149, 164) ;
         object-fit: cover;
         /*color: rgb(55, 57, 69);*/
         /*color:grey;*/
@@ -846,7 +847,8 @@ margin-right: 10px;
     margin-right: 25px;
     margin-left: 23px;
     text-align:justify;
-    color:#3D405B;
+    color:whitesmoke;
+    /*color:#3D405B;*/
     font:600;
 
 }
@@ -866,7 +868,8 @@ margin-right: 10px;
     margin-right: 25px;
     margin-left: 23px;
     text-align:justify;
-    color:#3D405B;
+    color:white;
+    /*color:#3D405B;*/
     font:600;
 
 }
@@ -876,6 +879,7 @@ margin-right: 10px;
     margin-right: 25px;
     margin-left: 23px;
     text-align:justify;
-    color:#3D405B;
+    color:whitesmoke;
+    /*color:#3D405B;*/
     font:600;
     }
