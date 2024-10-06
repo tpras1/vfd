@@ -38,7 +38,7 @@ nav {
     background-size: cover;
     display:grid;
     grid-template-areas: 'agro1 agro';
-    background-color:#2e757cf9;
+    background-color:#098369;
     /*color: rgb(55, 57, 69);*/
    /* background-color: rgb(220, 221, 225);*/
    grid-template-columns: 2.5fr .5fr;
@@ -112,7 +112,7 @@ background-position: center;*/
     grid-area: fetures;
     /*object-fit: cover;*/
     /*color: rgb(55, 57, 69);*/
-    background-color:rgb(130, 142, 151) ;
+    background-color:rgb(159, 9, 224) ;
     /*font-size: 12px;*/
     overflow: hidden;
     text-overflow: ellipsis;
@@ -130,7 +130,8 @@ background-position: center;*/
 
 .sysarch {
     grid-area: sysarch;
-	 background-color :rgb(185, 149, 164) ;
+background-color: #986d4c;
+	 /*background-color :rgb(185, 149, 164) ;*/
         object-fit: cover;
         /*color: rgb(55, 57, 69);*/
         /*color:grey;*/
@@ -143,7 +144,8 @@ background-position: center;*/
         border-radius: 8px;
         box-shadow:  0 0 20px  rgba(0, 0, 0, 0.5);
         border-left-width: 35px ;
-        border-left-color: #9068be;
+        border-left-color:#08c427;
+        /*border-left-color: #9068be;*/
         /*color: #9068be;*/
         color:grey;
         }
